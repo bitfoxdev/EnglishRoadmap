@@ -73,6 +73,7 @@ main{display:block}
 .facts li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid #ffffff1f;color:#b8c2e0;font-size:15px}
 .facts b{color:var(--yel);font:800 22px Literata,Georgia,serif;white-space:nowrap}
 .panel .linkbtn{color:var(--yel);align-self:center}
+.routine{display:grid;gap:12px}.routine .p-kick{margin:0}.panel .routine .p-desc{margin:0;font-size:14px}
 
 /* ---------- tugma va maydonlar ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--rule);background:var(--soft);border-radius:var(--r-sm);min-height:44px;padding:8px 16px;cursor:pointer;font-weight:700;text-decoration:none;transition:background-color .16s,border-color .16s,transform .08s}
@@ -162,46 +163,77 @@ textarea.wr{font:17px/1.6 Literata,Georgia,serif;background-image:repeating-line
 
 /* ---------- Kalendar ---------- */
 .yearh{display:flex;align-items:center;gap:14px;font-size:26px;margin:0 0 14px;scroll-margin-top:calc(var(--top) + 16px)}.yearh::after{content:"";flex:1;height:2px;background:var(--rule)}
-.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:16px;margin-bottom:32px}
-.mon{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);padding:16px 14px 14px;box-shadow:var(--lift)}
-.mon h3{font-size:18px;margin-bottom:10px}
-.mgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
-.mgrid .wd{font-size:11.5px;font-weight:700;color:var(--mut);text-align:center;padding:2px 0 4px}
-.cell{aspect-ratio:1/1;border-radius:50%;display:grid;place-items:center;align-content:center;position:relative;font:700 13px Literata,Georgia,serif;background:var(--soft);color:var(--ink)}
-.cell.blank{background:none}.cell.fut{background:none;color:var(--mut);opacity:.65}
-.cell.full{background:var(--yel);color:#18213b}
-.cell.tod{box-shadow:inset 0 0 0 2.5px var(--red)}
-.cell .cdays{position:absolute;right:-3px;bottom:-4px;display:flex;gap:1px}
-.cell .cdays a{font:700 10px/15px 'Atkinson Hyperlegible',system-ui,sans-serif;min-width:15px;text-align:center;background:#1b2547;color:#fff;border-radius:99px;padding:0 3px;text-decoration:none;box-shadow:0 0 0 1.5px var(--paper)}
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,370px),1fr));gap:16px;margin-bottom:32px}
+.mon{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);padding:16px 12px 12px;box-shadow:var(--lift)}
+.mon h3{font-size:19px;margin:0 0 10px 4px}
+.mgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.mgrid .wd{font-size:12px;font-weight:700;color:var(--mut);text-align:center;padding:2px 0 4px}
+.cell{position:relative;min-height:58px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 2px 4px;border:1px solid var(--rule);border-radius:9px;color:var(--ink)}
+.cell>b{align-self:flex-start;padding-left:4px;font:700 14px/1 Literata,Georgia,serif}
+.cell.blank{border:0}.cell.fut{color:var(--mut)}
+.cell.full{background:var(--yel);border-color:#e9b500;color:#18213b}
+.cell.tod{border:2.5px solid var(--red);padding:3.5px .5px 2.5px}
+.cell a{margin-top:auto;font:700 10.5px/16px 'Atkinson Hyperlegible',system-ui,sans-serif;white-space:nowrap;background:#1b2547;color:#fff;border-radius:5px;padding:0 4px;text-decoration:none}
+.cell a~a{margin-top:0}.cell a:only-of-type::after{content:"";position:absolute;inset:0;border-radius:8px}
+.cell.full:hover{box-shadow:0 0 0 2px var(--blue)}
+.cell>small{margin-top:auto;font-size:11px;font-weight:700;color:var(--red);line-height:16px}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:14.5px;color:#dfe5f5}
+.legend li{display:flex;align-items:center;gap:12px}.legend i{width:26px;height:26px;border-radius:7px;border:1px solid #ffffff55;flex:none}
+.legend .l-done{background:var(--yel);border-color:#e9b500}.legend .l-tod{border:2.5px solid var(--coral)}
 
-/* ---------- Roadmap ---------- */
+/* ---------- Roadmap: ro'yxat (index), har oy alohida sahifa ---------- */
 .ladder{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.stg{display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:4px 12px;align-items:center;background:#ffffff0a;border:1px solid #ffffff1a;border-radius:var(--r-md);padding:12px 14px}
+.stg{display:grid;grid-template-columns:46px minmax(0,1fr) auto;gap:4px 12px;align-items:center;color:inherit;text-decoration:none;background:#ffffff0a;border:1px solid #ffffff1a;border-radius:var(--r-md);padding:12px 14px;transition:background-color .16s,border-color .16s}
+.stg:hover{background:#ffffff17;border-color:#ffffff55}
 .stg>b{grid-row:1/3;font:800 20px Literata,Georgia,serif;color:var(--yel)}.stg span{font-weight:700}.stg small{grid-column:2/4;color:var(--sidemut);font-size:13px;margin-top:-4px}
-.stg em{font-style:normal;font-size:13px;color:#b8c2e0;font-weight:700}.stg .bar{grid-column:1/4;background:#ffffff1f;box-shadow:none;height:6px;margin-top:4px}
+.stg em{font-style:normal;font-size:13px;color:#b8c2e0;font-weight:700}.stg .bar{grid-column:1/4;background:#ffffff1f;box-shadow:none;height:6px;margin-top:4px;display:block}.stg .bar i{display:block}
 .stg.now{border-color:var(--coral);background:#ff6b7d14}
-.month{margin:30px 0 12px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.month:first-child{margin-top:0}
-.month h2{font-size:24px}.month span{color:var(--mut);font-weight:700;font-size:14px}
-.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:12px}
-details.wk{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);box-shadow:var(--lift);transition:border-color .16s}
-details.wk:hover{border-color:var(--edge)}
-details.wk[open]{grid-column:1/-1}details.wk[open]>summary{height:auto}
-details.wk>summary{list-style:none;cursor:pointer;padding:16px;display:flex;flex-direction:column;gap:8px;height:100%}
-details.wk>summary::-webkit-details-marker{display:none}
-.whead{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
-.wn{font:800 28px/1 Literata,Georgia,serif;color:var(--red)}.wn small{font:700 12.5px "Atkinson Hyperlegible",system-ui,sans-serif;color:var(--mut);margin-left:2px}
-.wsum b{display:block;font-size:16px;line-height:1.35}.wsum span{display:block;color:var(--mut);font-size:13.5px;margin-top:4px;line-height:1.45}
-.wp{margin-top:auto;display:grid;grid-template-columns:minmax(0,1fr) 38px;gap:8px;align-items:center}
+
+.tabs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-bottom:24px}
+.tabs a{display:grid;gap:5px;border:1px solid var(--rule);background:var(--paper);border-radius:var(--r-sm);padding:8px 8px 9px;min-height:48px;font-weight:700;font-size:14px;white-space:nowrap;text-decoration:none;color:var(--ink);transition:border-color .16s}
+.tabs a:hover{border-color:var(--blue)}.tabs a.now{border-color:var(--red);color:var(--red)}
+.tabs a.on{background:var(--side);border-color:var(--side);color:#fff;box-shadow:inset 0 -3px 0 var(--yel)}
+.tabs .bar{display:block;height:5px}.tabs .bar i{display:block}.tabs a.on .bar{background:#ffffff33;box-shadow:none}
+
+.mhead{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:4px 18px;align-items:end;margin-bottom:14px}
+.mhead h2{font-size:26px}.mhead span{display:block;color:var(--mut);font-weight:700;font-size:14px;margin-top:4px}
+.wgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.wk{grid-column:span 2;display:flex;flex-direction:column;gap:12px;padding:16px 18px;background:var(--paper);border:1px solid var(--rule);border-top:5px solid var(--edge);border-radius:var(--r-md);box-shadow:var(--lift);text-decoration:none;color:var(--ink);transition:border-color .16s,transform .16s var(--ease),box-shadow .16s}
+.wgrid.r1>.wk:nth-last-child(-n+4),.wgrid.r2>.wk:nth-last-child(-n+2){grid-column:span 3}
+.wk:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:0 8px 22px light-dark(#18213b1f,#0006)}
+.wk.is-done{border-top-color:var(--hlbar);background:linear-gradient(var(--hlsoft),var(--paper) 90px)}
+.wk.is-now{border-color:var(--red)}
+.whead{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.wn{font:800 30px/1 Literata,Georgia,serif}.wn small{font:700 13px "Atkinson Hyperlegible",system-ui,sans-serif;color:var(--mut);margin-left:2px}
+.wstate{font-size:12.5px;font-weight:700;color:var(--mut);background:var(--soft);border-radius:99px;padding:3px 10px;white-space:nowrap}
+.is-done .wstate{background:var(--yel);color:#18213b}.is-now .wstate{background:var(--red);color:light-dark(#fff,#18213b)}
+.wtitle{font:700 18px/1.3 Literata,Georgia,serif}
+.wtopics{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13.5px}
+.wtopics li{display:grid;grid-template-columns:8px 80px minmax(0,1fr);gap:8px;align-items:baseline}
+.wtopics i{width:8px;height:8px;border-radius:50%}.wtopics em{font-style:normal;color:var(--mut);font-weight:700}
+.wdays{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.wk .wdays{margin-top:auto;padding-top:12px;border-top:1px dashed var(--rule)}
+.wk .bub:hover{border-color:var(--edge)}.wk .bub.full:hover{border-color:#e9b500}.wk .bub.now:hover{border-color:var(--red)}
+.mpager{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.mpager .btn:only-child.next{margin-left:auto}
 .today-mark{box-shadow:inset 0 4px 0 var(--red),var(--lift)}
-details.wk.today-mark{border-color:color-mix(in srgb,var(--red) 45%,var(--rule))}
-.wbody{padding:0 18px 14px}
-.drow{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--rule)}
-.drow .dl{font-weight:700}.drow .dl small{display:block;font-weight:600;color:var(--mut)}.drow .dl a{font-size:13px}
-.drow.today-mark{box-shadow:inset 3px 0 0 var(--red);padding-left:12px}
-.mini{display:flex;gap:8px;align-items:flex-start;font-size:15px;margin:5px 0;font-weight:400;color:var(--ink)}
+@media(max-width:1180px){.wk,.wgrid.r1>.wk,.wgrid.r2>.wk{grid-column:span 3}.wgrid>.wk:last-child:nth-child(odd){grid-column:span 6}}
+@media(max-width:900px){.tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72px;overflow-x:auto;padding-bottom:4px}.routine{display:none}.ladder{grid-template-columns:1fr 1fr}.stg{grid-template-columns:minmax(0,1fr) auto;padding:10px 12px}.stg>b{grid-row:auto}.stg span:not(.bar){grid-column:1/-1;font-size:14px}.stg em{grid-row:1;grid-column:2}.stg small{display:none}}
+@media(max-width:700px){.wgrid>.wk{grid-column:1/-1!important}.mhead{grid-template-columns:1fr}}
+
+/* ---------- Roadmap: hafta sahifasi (show) ---------- */
+.back{align-self:flex-start;display:inline-flex;align-items:center;gap:6px;min-height:36px;color:var(--yel);font-weight:700;font-size:14.5px;text-underline-offset:3px}
+.back svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.winfo{margin:0;border-top:1px solid #ffffff1f}.winfo div{padding:9px 0;border-bottom:1px solid #ffffff1f}
+.winfo dt{font-size:13px;font-weight:700;color:var(--sidemut)}.winfo dd{margin:2px 0 0;font-size:15px}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pager .btn{padding:8px;font-size:14px}
+.dcard{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);box-shadow:var(--lift);padding:14px 18px 12px;margin-bottom:12px}
+.dcard header{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding-bottom:10px;margin-bottom:8px;border-bottom:1px solid var(--rule)}
+.dcard h3{font-size:21px}.dcard header small{display:block;color:var(--mut);font-weight:700;font-size:13.5px;margin-top:2px}
+.dcard.today-mark{border-color:color-mix(in srgb,var(--red) 45%,var(--rule))}
+.dcard.done{background:linear-gradient(90deg,var(--hlsoft),var(--paper) 55%)}
+.mini{display:flex;gap:10px;align-items:flex-start;font-size:15px;margin:7px 0;font-weight:400;color:var(--ink);cursor:pointer}
 .mini input{width:20px;height:20px;flex:none;accent-color:light-dark(#18213b,#ffd43b);margin-top:2px}
 .mini.done>span{background:linear-gradient(transparent 55%,var(--hl) 55% 92%,transparent 92%)}
-
 /* ---------- Notes ---------- */
 .panel input[type=search]{background:#ffffff12;border-color:#ffffff2e;color:#fff}.panel input[type=search]::placeholder{color:#93a0c4}
 .panel input[type=search]:focus{border-color:var(--yel);box-shadow:0 0 0 3px #ffe46b33}
@@ -213,14 +245,28 @@ details.add{background:var(--paper);border:2px dashed var(--edge);border-radius:
 details.add[open]{border-style:solid}
 details.add>summary{cursor:pointer;padding:14px 18px;font-weight:700;color:var(--blue)}
 details.add>form{padding:0 18px 18px}
-.notes{columns:2 320px;column-gap:16px}
-.note{position:relative;break-inside:avoid;background:var(--paper);border:1px solid var(--rule);border-top:5px solid var(--blue);border-radius:var(--r-md);padding:18px 20px 12px;margin-bottom:16px;box-shadow:var(--lift)}
-.note:nth-child(3n+2){border-top-color:var(--hlbar)}.note:nth-child(3n){border-top-color:var(--red)}
-.note h3{font-size:20px;margin:8px 0}.note .meta{font-size:12.5px;color:var(--mut);font-weight:700;padding-right:40px}
-.note ul{margin:6px 0;padding-left:20px}.note p{margin:8px 0}.note{overflow-wrap:anywhere}
-.note code{background:var(--soft);padding:1px 5px;border-radius:5px;font-family:inherit;font-weight:700}
+.ngroup{margin-bottom:28px}.ngroup>h2{font-size:23px;margin-bottom:10px;display:flex;align-items:baseline;gap:10px}
+.ngroup>h2 small{font:700 14px "Atkinson Hyperlegible",system-ui,sans-serif;color:var(--mut)}
+.note{background:var(--paper);border:1px solid var(--rule);border-left:6px solid var(--nc,var(--blue));border-radius:var(--r-md);margin-bottom:10px;box-shadow:var(--lift);overflow-wrap:anywhere;transition:border-color .16s}
+.note:hover{border-color:var(--edge);border-left-color:var(--nc,var(--blue))}
+.note>summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:15px 18px}
+.note>summary::-webkit-details-marker{display:none}
+.note>summary h3{font-size:19px;line-height:1.3}.note .meta{display:block;font-size:12.5px;color:var(--mut);font-weight:700;margin-top:2px}
+.note>summary svg{width:22px;height:22px;fill:none;stroke:var(--mut);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;transition:transform .18s var(--ease)}
+.note[open]>summary svg{transform:rotate(180deg)}
+.note[open]>summary{border-bottom:1px solid var(--rule)}
+.nbody{padding:6px 22px 14px;max-width:80ch;font-size:16.5px;line-height:1.65}
+.nbody h4{font-size:20px;margin:22px 0 8px}.nbody h5{font:700 16px "Atkinson Hyperlegible",system-ui,sans-serif;margin:16px 0 4px;color:var(--mut)}
+.nbody ul,.nbody ol{margin:8px 0;padding-left:24px}.nbody li{margin:5px 0}.nbody li::marker{color:var(--mut);font-weight:700}.nbody p{margin:10px 0}
+.nbody code{background:var(--soft);padding:1px 6px;border-radius:5px;font-family:inherit;font-weight:700}
+.tbw{overflow-x:auto;margin:12px 0}.nbody table{font-size:15px;line-height:1.5;box-shadow:none;border-radius:var(--r-sm);min-width:100%}
+.nbody th,.nbody td{padding:8px 12px;overflow-wrap:normal;min-width:84px}.nbody th{font-size:13.5px}
+.tip{background:var(--hlsoft);border:1px solid color-mix(in srgb,var(--hlbar) 45%,var(--rule));border-radius:var(--r-sm);padding:2px 16px;margin:14px 0}
+.nfoot{display:flex;justify-content:flex-end;margin-top:12px;border-top:1px dashed var(--rule);padding-top:8px}
 .del{border:0;background:none;color:var(--mut);cursor:pointer;min-width:40px;min-height:40px;font-size:18px;border-radius:var(--r-sm)}.del:hover{color:var(--red);background:var(--soft)}
-.note .del{position:absolute;top:8px;right:8px}.del[data-sure]{font-size:13px;font-weight:700;color:var(--red);background:var(--soft);padding:0 8px}
+.ndel{font-size:13.5px;font-weight:700;padding:0 12px}.del[data-sure]{font-size:13px;font-weight:700;color:var(--red);background:var(--soft);padding:0 8px}
+@media(max-width:900px){.chips{flex-direction:row;flex-wrap:wrap;gap:6px}.chips button{border-color:#ffffff2e;border-radius:99px;min-height:40px;padding:6px 14px;gap:8px}}
+@media(max-width:600px){.nbody{padding:4px 14px 12px;font-size:16px}.note>summary{padding:13px 14px}.note>summary h3{font-size:17.5px}}
 
 /* ---------- Lug'at ---------- */
 .leit{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;align-items:end;height:150px}
@@ -312,7 +358,7 @@ body.auth .side,body.auth .mtop{display:none}body.auth main{padding:0}body.auth{
 .dial{width:140px}.stg{padding:8px 12px}.work{padding:20px 14px 40px}.yearh{scroll-margin-top:76px}
 #timer{bottom:76px;right:8px;left:8px;width:auto}#toast{bottom:84px}}
 @media(max-width:600px){.panel h1.big{font-size:44px}.step{grid-template-columns:38px minmax(0,1fr);gap:10px}.step::before{left:18px}.chk{width:30px;height:30px}.node small{font-size:10.5px}.tk{padding:0 14px}.tk[open]{padding:0 13px}.tt{font-size:17px}
-.kv{grid-template-columns:1fr}.drow{grid-template-columns:1fr}.tl-n{display:none}.catrow{grid-template-columns:100px minmax(0,1fr)}.catrow .pct{grid-column:2;text-align:left}.weekbox{grid-template-columns:24px minmax(0,1fr) 24px;padding:10px 2px;gap:2px}.navbtn{width:24px}.ws b{width:28px;height:28px;font-size:12px}
+.kv{grid-template-columns:1fr}.dcard header{grid-template-columns:minmax(0,1fr) auto;gap:10px}.dcard header .btn{grid-column:1/-1}.mon{padding:12px 8px 8px}.cell{min-height:52px}.cell a{font-size:9.5px;padding:0 2px}.cell>small{font-size:9.5px}.tl-n{display:none}.catrow{grid-template-columns:100px minmax(0,1fr)}.catrow .pct{grid-column:2;text-align:left}.weekbox{grid-template-columns:24px minmax(0,1fr) 24px;padding:10px 2px;gap:2px}.navbtn{width:24px}.ws b{width:28px;height:28px;font-size:12px}
 .sheet{padding:18px 14px 18px 42px}
 table{font-size:14px}.stack{border:0;background:none;box-shadow:none}.stack thead{display:none}.stack tbody,.stack tr{display:block}.stack tr{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);padding:12px 14px;margin-bottom:10px}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:7em}.stack td::before{content:attr(data-l);float:inline-start;width:6.5em;margin-inline-start:-7em;color:var(--mut);font-size:13px}.stack td:empty{display:none}}
 </style>
@@ -328,6 +374,7 @@ table{font-size:14px}.stack{border:0;background:none;box-shadow:none}.stack thea
 <section id="v-bugun"><div class="loading">Yuklanmoqda…</div></section>
 <section id="v-kalendar" class="hide"></section>
 <section id="v-roadmap" class="hide"></section>
+<section id="v-hafta" class="hide"></section>
 <section id="v-notes" class="hide"></section>
 <section id="v-lugat" class="hide"></section>
 <section id="v-xatolar" class="hide"></section>
@@ -474,7 +521,8 @@ function renderToday(){
  const fmt=m=>`${Math.floor(m/60)}:${pad(m%60)}`;
  const first=d.tasks.find(t=>!S.done[t.id]);
  const[wa,wb]=weekStats(d.w);
- const panel=`<div class="p-kick">${d.w}-hafta, ${esc(MONN[wk.m])}</div>
+ const home=dayHome(),back=!location.hash.startsWith('#kun-')||home==='bugun'?null:home==='kalendar'?['kalendar','Kalendarga qaytish']:home==='progress'?['progress','Progressga qaytish']:['hafta-'+d.w,`${d.w}-haftaga qaytish`];
+ const panel=`${back?backLink(back[0],back[1]):''}<div class="p-kick">${d.w}-hafta, ${esc(MONN[wk.m])}</div>
   <h1 class="big">${dayNo(d)}‑kun${isCur?'<span class="stamp">navbatda</span>':''}${fin?'<span class="stamp">✓ '+esc(shortD(fin))+'</span>':''}</h1>
   <p class="p-desc">${esc(dayRole(d))}. ${total} daqiqa. Asosiy dars: ${esc(wk.nav)}</p>
   ${dial(n?k/n:0,wb?wa/wb:0,`${k}/${n}`,'vazifa bajarildi')}
@@ -550,10 +598,10 @@ function renderCalendar(){
  const endY=Math.max(ey*12+em,ly*12+lm,2027*12+11);
  while(y*12+m<=endY){months.push([y,m]);m++;if(m>11){m=0;y++}}
  const WD=['Du','Se','Ch','Pa','Ju','Sh','Ya'];const cd=curDay();
- const panel=phead('Kalendar',`Bu yerda faqat siz tugatgan kunlar ko'rinadi: har bir dars kuni siz kiritgan sanaga tushadi. Kunni tugatganingizda o'sha kunning sahifasida sanani kiriting.`)
-  +dial(nd/DAYS.length,null,String(nd),`/ ${DAYS.length} kun tugatildi`)
-  +facts([['Ketma-ket',`${streakDays()} kun`],['Qolgan',`${DAYS.length-nd} kun`]])
-  +`<a class="btn hl" href="#kun-${cd.date}">Navbatdagi: ${esc(dname(cd))}</a>
+ const panel=phead('Kalendar',`Tugatgan darslaringiz siz kiritgan sanada chiqadi. Darsni ochish uchun sariq katakni bosing.`)
+  +`<ul class="legend"><li><i class="l-done"></i>Dars tugatilgan (ichida dars raqami)</li><li><i class="l-tod"></i>Bugungi sana</li><li><i></i>Dars belgilanmagan</li></ul>`
+  +facts([['Tugatilgan',`${nd} / ${DAYS.length} kun`],['Ketma-ket',`${streakDays()} kun`]])
+  +`<a class="btn hl" href="#bugun">Bugungi darsga o'tish: ${esc(dname(cd))}</a>
   <div class="frow">${[...new Set(months.map(x=>x[0]))].map(y=>`<button class="btn ghost" type="button" data-y="${y}">${y}-yil</button>`).join('')}</div>`;
  let h='',py=null;
  for(const [y,m] of months){
@@ -562,62 +610,105 @@ function renderCalendar(){
   h+=`<div class="mon"><h3>${MNS[m][0].toUpperCase()+MNS[m].slice(1)}</h3><div class="mgrid">${WD.map(x=>`<div class="wd">${x}</div>`).join('')}`;
   for(let i=0;i<off;i++)h+='<div class="cell blank"></div>';
   for(let dd=1;dd<=nd2;dd++){const s=`${y}-${pad(m+1)}-${pad(dd)}`;const L=byDate[s]||[];
-   h+=`<div class="cell ${L.length?'full':''} ${s===TODAY?'tod':''} ${s>TODAY?'fut':''}">${dd}${L.length?`<div class="cdays">${L.map(x=>`<a href="#kun-${x.date}" title="${esc(dname(x))}: ${esc(WEEKS[x.w-1].nav)}">${dayNo(x)}</a>`).join('')}</div>`:''}</div>`}
+   h+=`<div class="cell ${L.length?'full':''} ${s===TODAY?'tod':''} ${s>TODAY?'fut':''}"><b>${dd}</b>${L.map(x=>`<a href="#kun-${x.date}" title="${esc(dname(x))}: ${esc(WEEKS[x.w-1].nav)}">${dayNo(x)}-kun</a>`).join('')}${s===TODAY&&!L.length?'<small>bugun</small>':''}</div>`}
   h+='</div></div>'}
  $('v-kalendar').innerHTML=page(panel,h+'</div>');
  $('v-kalendar').querySelectorAll('[data-y]').forEach(b=>b.onclick=()=>{const el=document.getElementById('y'+b.dataset.y);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})});
 }
 
 /* ---------- Roadmap ---------- */
-let openWeeks=null;
+/* #oy-N: N-oy sahifasi; #roadmap: hozirgi oy */
 function renderRoadmap(){
- if(!openWeeks){openWeeks=new Set([curDay().w])}const cdw=curDay().w;
- const sy=window.scrollY;
- const panel=phead('Roadmap',`${DAYS.length} kun, ${WEEKS.length} hafta. Har kuni 90 daqiqa (dushanba–shanba): lug'at 20, Navigate 40, grammatika yoki talaffuz 20, writing 10. 23-haftadan boshlab lug'at 15, writing 15 daqiqa. Har 7-kun takrorlash va mini test.`)
-  +`<ol class="ladder">${[['A1','Tekshiruv',1,1],['A2','Elementary',2,10],['B1','Pre-Intermediate',11,22],['B1+','Intermediate',23,34]].filter(s=>WEEKS[s[3]-1]).map(([lv,nm,a,b])=>{let k=0,n=0;for(let w=a;w<=b;w++){const[x,y]=weekStats(w);k+=x;n+=y}return`<li class="stg ${cdw>=a&&cdw<=b?'now':''}"><b>${lv}</b><span>${nm}</span><em>${Math.round(100*k/n)}%</em><small>${a===b?a+'-hafta':a+'–'+b+'-haftalar'}, ${DAYS.filter(d=>d.w>=a&&d.w<=b).length} kun</small><div class="bar"><i style="width:${Math.round(100*k/n)}%"></i></div></li>`}).join('')}</ol>`;
- let h='';
- for(const m of [...new Set(WEEKS.map(w=>w.m))]){
-  const ws=WEEKS.filter(w=>w.m===m);
-  const md=DAYS.filter(d=>ws.some(w=>w.w===d.w));h+=`<div class="month"><h2>${esc(MONN[m])}</h2><span>${dayNo(md[0])}–${dayNo(md[md.length-1])}-kunlar, ${ws.length} hafta</span></div><div class="wgrid">`;
-  for(const w of ws){const[k,n]=weekStats(w.w);const p=Math.round(100*k/n);const cur=w.w===cdw;const wd=DAYS.filter(d=>d.w===w.w);
-   h+=`<details class="wk ${cur?'today-mark':''}" data-w="${w.w}" ${openWeeks.has(w.w)?'open':''}><summary>
-    <div class="whead"><div class="wn">${w.w}<small>-hafta</small></div><span class="pct">${dayNo(wd[0])}–${dayNo(wd[wd.length-1])}-kun</span></div>
-    <div class="wsum"><b>${esc(w.nav)}</b><span>${esc(w.gram)} · ${esc(w.pron)}</span><span>So'zlar: ${esc(w.vocab)}. Writing: ${esc(w.write)}</span></div>
-    <div class="wp"><div class="bar"><i style="width:${p}%"></i></div><div class="pct">${p}%</div></div></summary>
-    <div class="wbody">${wd.map(d=>`<div class="drow ${d===curDay()&&!doneOn(d)?'today-mark':''}">
-     <div class="dl">${esc(dname(d))}<small>${doneOn(d)?'✓ '+esc(fmtD(doneOn(d))):(d.dn==='Yakshanba'?'takrorlash':'')}</small><a href="#kun-${d.date}">Batafsil</a></div>
-     <div>${d.tasks.map(t=>`<label class="mini ${S.done[t.id]?'done':''}"><input type="checkbox" data-id="${t.id}" ${S.done[t.id]?'checked':''}><span><span class="tag c-${t.c}">${CATN[t.c]}</span>${esc(t.t)}</span></label>`).join('')}</div></div>`).join('')}</div></details>`}
-  h+='</div>';
- }
+ const cd=curDay(),cdw=cd.w,months=[...new Set(WEEKS.map(w=>w.m))];
+ const curM=WEEKS.find(w=>w.w===cdw).m,asked=location.hash.match(/^#oy-(\d+)$/),m=asked?+asked[1]:curM;
+ if(!months.includes(m)){location.replace('#roadmap');return}
+ const sum=list=>list.reduce(([k,n],w)=>{const[a,b]=weekStats(w);return[k+a,n+b]},[0,0]);
+ const pc=([k,n])=>n?Math.round(100*k/n):0;
+ const weeksOf=x=>WEEKS.filter(w=>w.m===x);
+ const range=ds=>`${dayNo(ds[0])}–${dayNo(ds[ds.length-1])}-kun`;
+ const bubbles=wd=>`<div class="wdays">${wd.map(d=>{const[a,b]=dayStats(d),on=doneOn(d);return`<span class="bub ${on?'full':''} ${d===cd&&!on?'now':''}" style="--p:${Math.round(100*a/b)}%" title="${esc(dname(d))}: ${a}/${b} vazifa">${dayNo(d)}</span>`}).join('')}</div>`;
+ const stages=[['A1','Tekshiruv',1,1],['A2','Elementary',2,10],['B1','Pre-Intermediate',11,22],['B1+','Intermediate',23,34]].filter(s=>WEEKS[s[3]-1]);
+ const panel=phead('Roadmap',`${DAYS.length} kun, ${WEEKS.length} hafta, ${months.length} oy.`)
+  +`<ol class="ladder">${stages.map(([lv,nm,a,b])=>{const ws=WEEKS.map(w=>w.w).filter(w=>w>=a&&w<=b),p=pc(sum(ws));return`<li><a class="stg ${cdw>=a&&cdw<=b?'now':''}" href="#oy-${WEEKS.find(w=>w.w===a).m}"><b>${lv}</b><span>${nm}</span><em>${p}%</em><small>${a===b?a+'-hafta':a+'–'+b+'-haftalar'}, ${DAYS.filter(d=>d.w>=a&&d.w<=b).length} kun</small><span class="bar"><i style="width:${p}%"></i></span></a></li>`}).join('')}</ol>
+  <a class="btn hl" href="#hafta-${cdw}">Hozirgi hafta: ${cdw}-hafta</a>
+  <div class="routine"><div class="p-kick">Har kuni 90 daqiqa</div>
+  ${facts([['Lug\'at','20 daq'],['Navigate','40 daq'],['Grammatika yoki talaffuz','20 daq'],['Writing','10 daq']])}
+  <p class="p-desc">23-haftadan lug'at 15, writing 15 daqiqa. Har 7-kun takrorlash va mini test.</p></div>`;
+ const ws=weeksOf(m),md=DAYS.filter(d=>ws.some(w=>w.w===d.w)),p=pc(sum(ws.map(w=>w.w))),i=months.indexOf(m);
+ let h=`<nav class="tabs" aria-label="Oylar">${months.map(x=>{const q=pc(sum(weeksOf(x).map(w=>w.w)));return`<a href="#oy-${x}" class="${x===curM?'now':''} ${x===m?'on':''}" ${x===m?'aria-current="page"':''} title="${esc(MONN[x])}: ${q}%">${x}-oy<span class="bar"><i style="width:${q}%"></i></span></a>`}).join('')}</nav>
+  <div class="mhead"><div><h2>${esc(MONN[m])}</h2><span>${range(md)}lar, ${ws.length} hafta, ${md.filter(doneOn).length} / ${md.length} kun tugatildi</span></div><div><div class="pct">${p}%</div><div class="bar"><i style="width:${p}%"></i></div></div></div>
+  <div class="wgrid r${ws.length%3}">`;
+ for(const w of ws){const wd=DAYS.filter(d=>d.w===w.w),done=wd.every(doneOn),now=w.w===cdw&&!done;
+  h+=`<a class="wk ${done?'is-done':''} ${now?'is-now':''}" href="#hafta-${w.w}">
+   <div class="whead"><div class="wn">${w.w}<small>-hafta</small></div><span class="wstate">${done?'Tugatildi':now?'Hozirgi hafta':range(wd)}</span></div>
+   <b class="wtitle">${esc(w.nav)}</b>
+   <ul class="wtopics">${[['gram','Grammatika',w.gram],['pron','Talaffuz',w.pron],['vocab',"So'zlar",w.vocab],['write','Writing',w.write]].map(([c,l,v])=>`<li><i class="c-${c}"></i><em>${l}</em><span>${esc(v)}</span></li>`).join('')}</ul>
+   ${bubbles(wd)}</a>`}
+ h+=`</div><div class="mpager">${i>0?`<a class="btn" href="#oy-${months[i-1]}">Oldingi: ${months[i-1]}-oy</a>`:''}${i<months.length-1?`<a class="btn pri next" style="margin-left:auto" href="#oy-${months[i+1]}">Keyingi: ${months[i+1]}-oy</a>`:''}</div>`;
  $('v-roadmap').innerHTML=page(panel,h);
- $('v-roadmap').querySelectorAll('details.wk').forEach(x=>x.ontoggle=()=>{const w=+x.dataset.w;if(x.open)openWeeks.add(w);else openWeeks.delete(w)});
- $('v-roadmap').querySelectorAll('input[data-id]').forEach(c=>c.onchange=()=>{setDoneLocal(c.dataset.id,c.checked);renderRoadmap()});
- window.scrollTo(0,sy);
+ const tabs=$('v-roadmap').querySelector('.tabs'),on=tabs.querySelector('.on');tabs.scrollLeft=on.offsetLeft-tabs.offsetLeft-(tabs.clientWidth-on.clientWidth)/2;
 }
 
+function renderWeek(){
+ const num=+location.hash.slice('#hafta-'.length);const w=WEEKS.find(x=>x.w===num);if(!w){location.replace('#roadmap');return}
+ const wd=DAYS.filter(d=>d.w===num),[k,n]=weekStats(num),cd=curDay(),done=wd.filter(doneOn).length,sy=window.scrollY;
+ const panel=`${backLink('oy-'+w.m,w.m+'-oyga qaytish')}<div class="p-kick">${esc(MONN[w.m])}</div><h1 class="big">${num}‑hafta</h1><p class="p-desc">${esc(w.nav)}</p>`
+  +dial(n?k/n:0,null,pctTxt(n?k/n:0),`${done} / ${wd.length} kun tugatildi`)
+  +`<dl class="winfo">${[['Grammatika',w.gram],['Talaffuz',w.pron],['So\'zlar',w.vocab],['Writing',w.write]].map(([a,b])=>`<div><dt>${a}</dt><dd>${esc(b)}</dd></div>`).join('')}</dl>
+  <div class="pager">${num>1?`<a class="btn ghost" href="#hafta-${num-1}">Oldingi hafta</a>`:'<span></span>'}${num<WEEKS.length?`<a class="btn ghost" href="#hafta-${num+1}">Keyingi hafta</a>`:''}</div>`;
+ const work=`<div class="sechead"><h2>Hafta darslari</h2><span class="pct">${dayNo(wd[0])}–${dayNo(wd[wd.length-1])}-kunlar</span></div>`
+  +wd.map(d=>{const[a,b]=dayStats(d),on=doneOn(d),now=d===cd&&!on;return`<article class="dcard ${now?'today-mark':''} ${on?'done':''}">
+   <header><div><h3>${esc(dname(d))}</h3><small>${on?'Tugatilgan: '+esc(fmtD(on)):(now?'Navbatdagi dars':esc(dayRole(d)))}</small></div><span class="pct">${a}/${b} vazifa</span><a class="btn ${now?'pri':''}" href="#kun-${d.date}">Darsni ochish</a></header>
+   ${d.tasks.map(t=>`<label class="mini ${S.done[t.id]?'done':''}"><input type="checkbox" data-id="${t.id}" ${S.done[t.id]?'checked':''}><span><span class="tag c-${t.c}">${CATN[t.c]}</span>${esc(t.t)}</span></label>`).join('')}</article>`}).join('');
+ $('v-hafta').innerHTML=page(panel,work);
+ $('v-hafta').querySelectorAll('input[data-id]').forEach(c=>c.onchange=()=>{setDoneLocal(c.dataset.id,c.checked);renderWeek()});
+ window.scrollTo(0,sy);
+}
 /* ---------- Notes ---------- */
-function md(t){const lines=esc(t).split('\n');let out='',inl=false;
- const fmt=s=>s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`(.+?)`/g,'<code>$1</code>');
- for(const l of lines){if(/^\s*-\s+/.test(l)){if(!inl){out+='<ul>';inl=true}out+='<li>'+fmt(l.replace(/^\s*-\s+/,''))+'</li>'}
-  else{if(inl){out+='</ul>';inl=false}if(l.trim())out+='<p>'+fmt(l)+'</p>'}}
- if(inl)out+='</ul>';return out}
+function md(t){const lines=esc(t).split('\n');let out='',mode='';
+ const fmt=x=>x.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`(.+?)`/g,'<code>$1</code>').replace(/\*([^*\s](?:[^*]*[^*\s])?)\*/g,'<i>$1</i>');
+ const close=()=>{if(mode==='ul')out+='</ul>';else if(mode==='ol')out+='</ol>';else if(mode==='tb')out+='</tbody></table></div>';else if(mode==='q')out+='</div>';mode=''};
+ for(let k=0;k<lines.length;k++){const l=lines[k];
+  if(/^\s*-\s+/.test(l)){if(mode!=='ul'){close();out+='<ul>';mode='ul'}out+='<li>'+fmt(l.replace(/^\s*-\s+/,''))+'</li>'}
+  else if(/^\s*\d+\.\s+/.test(l)){if(mode!=='ol'){close();out+='<ol>';mode='ol'}out+='<li>'+fmt(l.replace(/^\s*\d+\.\s+/,''))+'</li>'}
+  else if(/^\|/.test(l)){const c=l.replace(/^\||\|\s*$/g,'').split('|').map(x=>x.trim());
+   if(/^[\s:|-]+$/.test(l))continue;
+   if(mode!=='tb'){close();out+='<div class="tbw"><table><thead><tr>'+c.map(x=>'<th>'+fmt(x)+'</th>').join('')+'</tr></thead><tbody>';mode='tb'}
+   else out+='<tr>'+c.map(x=>'<td>'+fmt(x)+'</td>').join('')+'</tr>'}
+  else if(/^&gt;\s?/.test(l)){if(mode!=='q'){close();out+='<div class="tip">';mode='q'}out+='<p>'+fmt(l.replace(/^&gt;\s?/,''))+'</p>'}
+  else if(/^###\s+/.test(l)){close();out+='<h5>'+fmt(l.replace(/^###\s+/,''))+'</h5>'}
+  else if(/^##\s+/.test(l)){close();out+='<h4>'+fmt(l.replace(/^##\s+/,''))+'</h4>'}
+  else{close();if(l.trim())out+='<p>'+fmt(l)+'</p>'}}
+ close();return out}
+const openNotes=new Set();
+const NOTE_COLORS={Strategiya:'#c41e3a',Kitoblar:'#2f55b8',Usullar:'#2e7d5b',Maslahatlar:'#e9b500',Grammatika:'#7a3fb0',Writing:'#a95a12'};
 function renderNotes(){
- const cats=[...new Set(NOTES.map(n=>n.cat).filter(Boolean))];
- const list=NOTES.filter(n=>(noteCat==='all'||n.cat===noteCat)&&(!noteQ||(n.title+' '+n.body).toLowerCase().includes(noteQ.toLowerCase())))
-  .sort((a,b)=>(a.ord??999)-(b.ord??999)||String(a.date).localeCompare(String(b.date)));
- const panel=phead('Notes',`Mavzular bo'yicha konspektlar. Har darsdan keyin yangi mavzu qo'shing (Claude yozib bergan konspektni shu yerga joylang).`)
-  +`<input type="search" id="nq" placeholder="Qidirish: wish, present perfect…" aria-label="Notelardan qidirish" value="${esc(noteQ)}">
-  <div class="chips"><button data-c="all" class="${noteCat==='all'?'on':''}">Hammasi<small>${NOTES.length}</small></button>${cats.map(c=>`<button data-c="${esc(c)}" class="${noteCat===c?'on':''}">${esc(c)}<small>${NOTES.filter(n=>n.cat===c).length}</small></button>`).join('')}</div>`;
+ const all=NOTES.slice().sort((a,b)=>(a.ord??999)-(b.ord??999)||String(a.date||'').localeCompare(String(b.date||'')));
+ const catOf=n=>n.cat||'Boshqa',cats=[...new Set(all.map(catOf))];
+ if(noteCat!=='all'&&!cats.includes(noteCat))noteCat='all';
+ const q=noteQ.trim().toLowerCase();
+ const list=all.filter(n=>(noteCat==='all'||catOf(n)===noteCat)&&(!q||(n.title+' '+n.body).toLowerCase().includes(q)));
+ const isOpen=n=>openNotes.has(n.id)||(q&&list.length<=6)||list.length===1;
+ const card=n=>`<details class="note" data-id="${esc(n.id)}" style="--nc:${NOTE_COLORS[catOf(n)]||'#475069'}" ${isOpen(n)?'open':''}><summary><div><h3>${esc(n.title)}</h3>${n.date?`<span class="meta">${esc(n.date)}</span>`:''}</div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nbody">${md(n.body||'')}<div class="nfoot"><button class="del ndel" type="button" data-deln="${esc(n.id)}">O'chirish</button></div></div></details>`;
+ const panel=phead('Notes',`Strategiya, kitoblar, usullar va maslahatlar. Mavzu nomini bosing, ochiladi.`)
+  +`<input type="search" id="nq" placeholder="Qidirish: wish, shadowing, Azar…" aria-label="Notelardan qidirish" value="${esc(noteQ)}">
+  <div class="chips"><button data-c="all" class="${noteCat==='all'?'on':''}">Hammasi<small>${NOTES.length}</small></button>${cats.map(c=>`<button data-c="${esc(c)}" class="${noteCat===c?'on':''}">${esc(c)}<small>${all.filter(n=>catOf(n)===c).length}</small></button>`).join('')}</div>`;
  const work=`<details class="add"><summary>+ Yangi note qo'shish</summary><form id="nf">
   <div class="grid2"><div><label for="nt">Sarlavha</label><input type="text" id="nt" required placeholder="Present Perfect vs Past Simple"></div>
   <div><label for="nc">Bo'lim</label><input type="text" id="nc" list="ncl" required placeholder="Grammatika"><datalist id="ncl">${cats.map(c=>`<option value="${esc(c)}">`).join('')}</datalist></div></div>
-  <label for="nb">Matn (- bilan ro'yxat, **qalin**, \`kod\`)</label><textarea id="nb" required style="min-height:160px"></textarea>
+  <label for="nb">Matn (## sarlavha, - ro'yxat, 1. raqamli ro'yxat, | jadval |, &gt; maslahat, **qalin**, \`kod\`)</label><textarea id="nb" required style="min-height:160px"></textarea>
   <div style="margin-top:12px"><button class="btn pri" type="submit">Saqlash</button></div></form></details>
- ${list.length?`<div class="notes" id="nlist">${list.map(n=>`<article class="note"><div class="meta">${esc(n.cat||'')}${n.date?' · '+esc(n.date):''}</div><h3>${esc(n.title)}</h3>${md(n.body||'')}<button class="del" data-deln="${esc(n.id)}" aria-label="O'chirish">×</button></article>`).join('')}</div>`:`<div class="empty">${NOTES.length?'Hech narsa topilmadi. Qidiruv so\'zini yoki bo\'limni o\'zgartiring.':'Hali note yo\'q. Yuqoridagi tugma orqali birinchisini qo\'shing.'}</div>`}`;
+ ${list.length?`<div class="sechead"><span class="pct">${list.length} ta mavzu</span><button class="linkbtn" type="button" id="nall">Hammasini ochish</button></div>
+  <div id="nlist">${cats.filter(c=>list.some(n=>catOf(n)===c)).map(c=>{const g=list.filter(n=>catOf(n)===c);return`<section class="ngroup"><h2>${esc(c)}<small>${g.length}</small></h2>${g.map(card).join('')}</section>`}).join('')}</div>`:`<div class="empty">${NOTES.length?'Hech narsa topilmadi. Qidiruv so\'zini yoki bo\'limni o\'zgartiring.':'Hali note yo\'q. Yuqoridagi tugma orqali birinchisini qo\'shing.'}</div>`}`;
  $('v-notes').innerHTML=page(panel,work);
- $('nq').oninput=e=>{noteQ=e.target.value;const p=e.target.selectionStart;renderNotes();const q=$('nq');q.focus();q.setSelectionRange(p,p)};
- $('v-notes').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{noteCat=b.dataset.c;renderNotes()});
- $('nf').onsubmit=e=>{e.preventDefault();const n={id:'n'+Date.now(),title:$('nt').value.trim(),cat:$('nc').value.trim(),body:$('nb').value,ord:999,date:TODAY};if(!n.title)return;NOTES.push(n);renderNotes();saved(post('notes',n))};
+ const items=[...$('v-notes').querySelectorAll('details.note')];
+ const label=()=>{if($('nall'))$('nall').textContent=items.some(x=>!x.open)?'Hammasini ochish':'Hammasini yig\'ish'};label();
+ if($('nall'))$('nall').onclick=()=>{const open=items.some(x=>!x.open);items.forEach(x=>{x.open=open;if(open)openNotes.add(x.dataset.id);else openNotes.delete(x.dataset.id)});label()};
+ /* faqat foydalanuvchi bosganda eslab qolinadi (qidiruv o'zi ochganlari emas) */
+ items.forEach(x=>{x.querySelector('summary').onclick=()=>{if(x.open)openNotes.delete(x.dataset.id);else openNotes.add(x.dataset.id)};x.ontoggle=label});
+ $('nq').oninput=e=>{noteQ=e.target.value;const p=e.target.selectionStart;renderNotes();const f=$('nq');f.focus();f.setSelectionRange(p,p)};
+ $('v-notes').querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{noteCat=b.dataset.c;renderNotes();window.scrollTo(0,0)});
+ $('nf').onsubmit=e=>{e.preventDefault();const n={id:'n'+Date.now(),title:$('nt').value.trim(),cat:$('nc').value.trim(),body:$('nb').value,ord:999,date:TODAY};if(!n.title)return;NOTES.push(n);openNotes.add(n.id);renderNotes();saved(post('notes',n))};
  $('v-notes').querySelectorAll('[data-deln]').forEach(b=>b.onclick=()=>{const n=NOTES.find(x=>x.id===b.dataset.deln);if(!n)return;if(b.dataset.sure!=='1'){b.dataset.sure='1';b.textContent='O\'chirilsinmi?';return}NOTES=NOTES.filter(x=>x.id!==n.id);renderNotes();saved(api('notes/'+encodeURIComponent(n.id),{method:'DELETE'}))});
 }
 
@@ -715,11 +806,18 @@ function renderProgress(){
  $('v-progress').innerHTML=page(panel,work);
 }
 /* ---------- Router ---------- */
-const VIEWS=['bugun','kalendar','roadmap','notes','lugat','xatolar','progress'];
-const R={bugun:renderToday,kalendar:renderCalendar,roadmap:renderRoadmap,notes:renderNotes,lugat:renderWords,xatolar:renderMist,progress:renderProgress};
-function cur(){const h=location.hash.slice(1);if(/^kun-\d{4}-\d{2}-\d{2}$/.test(h))return 'bugun';return VIEWS.includes(h)?h:'bugun'}
+const VIEWS=['bugun','kalendar','roadmap','hafta','notes','lugat','xatolar','progress'];
+const R={bugun:renderToday,kalendar:renderCalendar,roadmap:renderRoadmap,hafta:renderWeek,notes:renderNotes,lugat:renderWords,xatolar:renderMist,progress:renderProgress};
+function cur(){const h=location.hash.slice(1);if(/^kun-\d{4}-\d{2}-\d{2}$/.test(h))return 'bugun';if(/^hafta-\d+$/.test(h))return 'hafta';if(/^oy-\d+$/.test(h))return 'roadmap';return h!=='hafta'&&VIEWS.includes(h)?h:'bugun'}
+let cameFrom='';
+/* kun sahifasi qaysi bo'limga tegishli: qayerdan ochilgan bo'lsa, o'sha */
+function dayHome(){if(['bugun','kalendar','progress'].includes(cameFrom))return cameFrom;if(cameFrom==='roadmap'||/^(oy|hafta)-/.test(cameFrom))return 'roadmap';return BYDATE[selDate]===curDay()?'bugun':'roadmap'}
+const backLink=(to,label)=>`<a class="back" href="#${to}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>${label}</a>`;
 function route(){const h=location.hash.slice(1);const m=h.match(/^kun-(\d{4}-\d{2}-\d{2})$/);if(m&&BYDATE[m[1]])selDate=m[1];else if(h==='bugun'||!h){selDate=curDay().date}
- updateHeader();const v=cur();document.title=({bugun:'Bugun',kalendar:'Kalendar',roadmap:'Roadmap',notes:'Notes',lugat:'Lug\'at',xatolar:'Xatolar',progress:'Progress'}[v]||'')+' — IELTS 7 kundaligi';if(m&&BYDATE[m[1]])document.title=dname(BYDATE[m[1]])+' — IELTS 7 kundaligi';VIEWS.forEach(x=>$('v-'+x).classList.toggle('hide',x!==v));const nv=m?'kalendar':v;document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+nv));R[v]();}
+ if(!m)cameFrom=h||'bugun';
+ updateHeader();const v=cur();let title={bugun:'Bugun',kalendar:'Kalendar',roadmap:'Roadmap',notes:'Notes',lugat:'Lug\'at',xatolar:'Xatolar',progress:'Progress'}[v]||'';
+ if(v==='hafta')title=h.slice(6)+'-hafta';if(/^oy-\d+$/.test(h))title=h.slice(3)+'-oy';if(m&&BYDATE[m[1]])title=dname(BYDATE[m[1]]);document.title=title+' — IELTS 7 kundaligi';
+ VIEWS.forEach(x=>$('v-'+x).classList.toggle('hide',x!==v));const nv=m?dayHome():(v==='hafta'?'roadmap':v);document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+nv));R[v]();}
 window.addEventListener('hashchange',()=>{route();window.scrollTo(0,0)});
 document.getElementById('nav').addEventListener('click',e=>{const a=e.target.closest('a');if(a&&a.getAttribute('href')===location.hash){e.preventDefault();route();window.scrollTo(0,0)}});
 document.addEventListener('keydown',e=>{if(cur()!=='bugun'||!DAYS.length)return;const tg=e.target.tagName;if(tg==='TEXTAREA'||tg==='SELECT'||(tg==='INPUT'&&e.target.type!=='checkbox')||e.altKey||e.ctrlKey||e.metaKey)return;

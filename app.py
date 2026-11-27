@@ -135,13 +135,23 @@ def init_db():
             if name not in COLLECTIONS:
                 continue
             table, cols = COLLECTIONS[name]
+            # Notes: seed versiyasi o'zgarsa, tayyor notelar yangilanadi (o'zingiz qo'shganlar tegilmaydi)
+            ver = str(seed.get("_notes_v", 1)) if name == "notes" else None
+            force = name == "notes" and "notes_v" not in done_seed or (name == "notes" and
+                    (con.execute("SELECT v FROM meta WHERE k='notes_v'").fetchone() or [None])[0] != ver)
             for r in rows:
                 key = f"seed:{name}:{r['id']}"
-                if key in done_seed:
+                if key in done_seed and not force:
                     continue
                 vals = [r.get(c) for c in cols]
-                con.execute(f"INSERT OR IGNORE INTO {table}({','.join(q(c) for c in cols)}) VALUES({','.join('?'*len(cols))})", vals)
+                if force:
+                    sets = ",".join(f"{q(c)}=excluded.{q(c)}" for c in cols if c != "id")
+                    con.execute(f"INSERT INTO {table}({','.join(q(c) for c in cols)}) VALUES({','.join('?'*len(cols))}) ON CONFLICT(id) DO UPDATE SET {sets}", vals)
+                else:
+                    con.execute(f"INSERT OR IGNORE INTO {table}({','.join(q(c) for c in cols)}) VALUES({','.join('?'*len(cols))})", vals)
                 con.execute("INSERT OR IGNORE INTO meta VALUES(?,?)", (key, "1"))
+            if name == "notes":
+                con.execute("INSERT OR REPLACE INTO meta VALUES('notes_v',?)", (ver,))
     con.commit()
     con.close()
 

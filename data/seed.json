@@ -1,42 +1,431 @@
 {
-"notes": [
-{"id":"n01","cat":"Usullar","ord":1,"date":"2026-11-26","title":"Kunlik 90 daqiqa tartibi","body":"Dushanba–shanba har kuni 4 blok:\n- **20 daq — Lug'at:** 4000 Essential Words, kuniga 10 so'z. Har bir so'zga o'zingiz haqingizda 1 ta gap.\n- **40 daq — Navigate:** asosiy darslik (reading, listening, speaking, writing).\n- **20 daq — Grammatika (Du/Chor/Ju) yoki Talaffuz (Se/Pay/Sha):** Azar Red va Pronunciation in Use.\n- **10 daq — Writing:** yozasiz va chatga yuborasiz, xatolarni «Xatolar» sahifasiga qo'shasiz.\nYakshanba: 40 daqiqa — flashcard, xatolar daftari va mini test.\nQoida: muntazamlik tezlikdan muhimroq. Bir kun qolib ketsa, ikki kunni bir kunda qilmang — keyingi kundan davom eting."},
-{"id":"n02","cat":"Usullar","ord":2,"date":"2026-11-26","title":"Navigate bilan qanday ishlash kerak","body":"**Reading:** 1) 60 soniya ko'z yugurtiring — matn nima haqida? 2) Savollarni o'qib, kalit so'zlarni toping. 3) Matnni diqqat bilan o'qib, notanish iboralarni belgilang.\n**Listening (3 marta):**\n- 1-marta: to'xtatmasdan, umumiy g'oya.\n- 2-marta: savollarga javob, kerak bo'lsa pauza.\n- 3-marta: audioscript bilan (kitob oxirida). Eshitmagan so'zlarni belgilang.\n**Speaking:** topshiriqqa 1–2 daqiqa diktofonga javob bering, qayta eshiting.\n**Workbook:** Coursebook'dan kamida bir necha soat yoki 1 kun keyin bajaring."},
-{"id":"n03","cat":"Usullar","ord":3,"date":"2026-11-26","title":"1-hafta: Beginner tezkor tekshiruvi (85% qoidasi)","body":"Siz B1 darajadagi matnni tushundingiz, shuning uchun Beginner'ni boshidan o'qimaymiz.\n- Har bir Unit uchun faqat **Workbook**ni bajaring (Coursebook'siz).\n- Javoblarni Answer key (p92) bilan tekshiring, foizni hisoblang va «Kun izohi»ga yozing.\n- **85% va yuqori** → o'tkazib yuborasiz.\n- **85% dan past** → shanba kuni o'sha Unit'ning Coursebook grammatikasini o'qib, xatolarni qayta bajarasiz."},
-{"id":"n04","cat":"Usullar","ord":4,"date":"2026-11-26","title":"So'z yodlash: 4000 Essential Words","body":"- So'zni tarjima bilan emas, **ta'rif + misol gap** orqali o'rganing.\n- Audio bilan 3 marta ovoz chiqarib ayting.\n- O'zingiz haqingizda **1 ta real gap** yozing. Misol: `afraid` → I am not afraid of making mistakes in English.\n- Ikkinchi kuni: Exercise'lar + hikoyani ovoz chiqarib o'qish.\n- Takrorlash: 1-kun, 2-kun, 4-kun, 7-kun, 14-kun (yakshanba flashcard)."},
-{"id":"n05","cat":"Usullar","ord":5,"date":"2026-11-26","title":"Azar va Pronunciation bilan ishlash","body":"**Azar:** chart'da 3 narsaga qarang — **form** (qanday yasaladi), **meaning** (nima bildiradi), **use** (qachon ishlatiladi). Mashqlarni yozma bajaring, oxirida tekshiring. Keyin qoidani o'zingizga ovoz chiqarib tushuntiring va o'z hayotingizdan 3 ta gap yozing.\n**Pronunciation in Use:** audio eshiting → pauza → spiker bilan bir xil tezlikda takrorlang (shadowing). O'z ovozingizni yozib, audio bilan solishtiring."},
-{"id":"g01","cat":"Grammatika","ord":10,"date":"2026-11-26","title":"Present Simple: he / she / it + -s","body":"Diagnostikada: «Tom play football» deb yozdingiz.\n**Qoida:** he, she, it (yoki bitta odam/narsa) bilan fe'lga **-s / -es** qo'shiladi.\n- I play → He **plays**\n- I watch → She **watches** (-ch, -sh, -s, -x, -o → -es)\n- I study → It **studies** (undosh + y → -ies)\nInkor va savolda -s **does**ga o'tadi, fe'l esa oddiy qoladi:\n- He **doesn't play**. (✗ doesn't plays)\n- **Does** he **play**? (✗ Does he plays?)"},
-{"id":"g02","cat":"Grammatika","ord":11,"date":"2026-11-26","title":"Neither of / Each of / Either of + birlik fe'l","body":"Diagnostikada: «Neither of the students know» → to'g'ri: **knows**.\n`Neither of`, `each of`, `either of`, `none of` + ko'plik ot → fe'l odatda **birlik** bo'ladi (rasmiy uslubda).\n- **Neither** of my brothers **lives** in Tashkent.\n- **Each** of the students **has** a book.\nShunga o'xshash: `The number of` + ko'plik → **has** (birlik). Lekin `A number of students` → **have** (ko'plik)."},
-{"id":"g03","cat":"Grammatika","ord":12,"date":"2026-11-26","title":"Wish: hozirgi va o'tmishdagi pushaymonlik","body":"Diagnostikada: «I wish I have studied harder last year» → to'g'ri: **had studied**.\n- **Hozir** haqida → wish + **Past Simple**: I wish I **knew** more words. (Hozir bilmayman.)\n- **O'tmish** haqida → wish + **Past Perfect**: I wish I **had studied** harder last year. (O'qimaganman.)\n- **Kelajak / boshqa odamning harakati** → wish + **would**: I wish it **would** stop raining.\nBatafsil: Mohida kursi Lesson 20 (Wishes) — 12-hafta rejasida."},
-{"id":"g04","cat":"Grammatika","ord":13,"date":"2026-11-26","title":"Gerund (-ing) yoki infinitive (to + fe'l)?","body":"Diagnostikada: «She suggested to postpone» → to'g'ri: **postponing**.\n**-ing bilan keladi:** suggest, enjoy, avoid, finish, mind, consider, recommend, admit, keep.\n- I enjoy **reading**. She suggested **postponing** the meeting.\n**to + fe'l bilan keladi:** want, decide, plan, hope, agree, refuse, promise, need, learn.\n- I want **to learn** English. He decided **to stay**.\nBatafsil: Mohida kursi Lesson 11–12 — 12-hafta rejasida."},
-{"id":"g05","cat":"Grammatika","ord":14,"date":"2026-11-26","title":"Not only … but also (inversion) — Band 7 struktura","body":"Diagnostikada: «Not only he was late» → to'g'ri: **Not only was he late**.\nAgar `Not only` gap **boshida** kelsa, yordamchi fe'l egadan **oldin** keladi (xuddi savoldagidek):\n- **Not only was he** late, but he also forgot the documents.\n- **Not only does** pollution harm health, but it also damages the economy.\nGap o'rtasida bo'lsa, inversion yo'q: He was **not only** late **but also** rude.\nHozir buni yodda saqlang — faol ishlatish B2 bosqichida."},
-{"id":"w01","cat":"Writing","ord":20,"date":"2026-11-26","title":"Fikr yozish uchun gap qoliplari","body":"Fikrni yetkaza olmaslik — normal holat. Yechim: tayyor qoliplar. Faqat bo'sh joyni to'ldirasiz.\n- **Fikr:** I prefer __ because __. / I think (that) __.\n- **1-sabab:** One reason is that __.\n- **Misol:** For example, __.\n- **2-sabab:** Also, __. / Another reason is that __.\n- **Qarshi fikr:** However, some people think __.\n- **Xulosa:** In conclusion, I believe __.\nBilmagan so'zni o'zbekcha qavs ichida yozing: I like (tinch) places. Men tekshirganda inglizchasini aytaman."},
-{"id":"w02","cat":"Writing","ord":21,"date":"2026-11-26","title":"Paragraf tuzilmasi (4-haftadan boshlab)","body":"Bitta paragraf = bitta asosiy fikr.\n- **Topic sentence:** asosiy fikr (1 gap).\n- **Supporting sentences:** 2 ta sabab, har biriga misol.\n- **Concluding sentence:** fikrni boshqa so'zlar bilan qaytarish.\nBog'lovchilar: **and, but, because, so, also, however, for example, first, then, finally, in conclusion**.\nO'sish rejasi: 1-hafta 3 gap → 2-hafta 5 gap → 4-hafta 80 so'z → 2-oy 100–120 so'z → 3-oy 150 so'z."}
-],
-"tests": [
-{"id":"t01","date":"2026-11-26","name":"Diagnostika: Grammar","result":"6/10","detail":"Zamonlar yaxshi. Xatolar: neither of + fe'l, wish, not only inversion, suggest + -ing."},
-{"id":"t02","date":"2026-11-26","name":"Diagnostika: Vocabulary","result":"0/10","detail":"Academic so'zlar notanish (urinilmadi)."},
-{"id":"t03","date":"2026-11-26","name":"Diagnostika: Reading","result":"Akademik: 0 · A2: 4/4 · B1: 4/4","detail":"Oddiy va B1 matnlarni tushunadi; muammo — so'z boyligi."},
-{"id":"t04","date":"2026-11-26","name":"Diagnostika: Writing","result":"urinilmadi","detail":"Fikrni ingliz tilida ifodalash — eng zaif joy."},
-{"id":"t05","date":"2026-11-26","name":"Taxminiy umumiy daraja","result":"IELTS 3.5–4.0 (A2+/B1-)","detail":"Listening va Speaking tekshirilmagan."}
-],
-"words": [
-{"id":"w_diag01","w":"fluctuate","uz":"o'zgarib turmoq (ko'tarilib-tushib)","ex":"Prices fluctuate throughout the year.","added":"2026-11-26"},
-{"id":"w_diag02","w":"curb","uz":"cheklamoq, jilovlamoq","ex":"The government should curb pollution.","added":"2026-11-26"},
-{"id":"w_diag03","w":"substantial","uz":"sezilarli, katta","ex":"There was a substantial increase in prices.","added":"2026-11-26"},
-{"id":"w_diag04","w":"tend to","uz":"moyil bo'lmoq, odatda shunday qilmoq","ex":"Students tend to study the night before an exam.","added":"2026-11-26"},
-{"id":"w_diag05","w":"detrimental","uz":"zararli","ex":"Smoking has a detrimental effect on health.","added":"2026-11-26"},
-{"id":"w_diag06","w":"come into effect","uz":"kuchga kirmoq","ex":"The new law will come into effect next month.","added":"2026-11-26"},
-{"id":"w_diag07","w":"widespread","uz":"keng tarqalgan","ex":"Smartphones are widespread in Uzbekistan.","added":"2026-11-26"},
-{"id":"w_diag08","w":"alleviate","uz":"yengillashtirmoq, kamaytirmoq","ex":"Exercise can alleviate stress.","added":"2026-11-26"},
-{"id":"w_diag09","w":"trivial","uz":"ahamiyatsiz, arzimas","ex":"Don't worry about trivial mistakes.","added":"2026-11-26"},
-{"id":"w_diag10","w":"hold the view (that)","uz":"… degan fikrda bo'lmoq","ex":"Many people hold the view that technology isolates us.","added":"2026-11-26"}
-],
-"mistakes": [
-{"id":"m_diag01","wrong":"Tom play football.","right":"Tom plays football.","why":"Present Simple: he/she/it + -s","date":"2026-11-26"},
-{"id":"m_diag02","wrong":"Neither of the students know the answer.","right":"Neither of the students knows the answer.","why":"Neither of + birlik fe'l","date":"2026-11-26"},
-{"id":"m_diag03","wrong":"I wish I have studied harder last year.","right":"I wish I had studied harder last year.","why":"O'tmishdagi pushaymonlik: wish + Past Perfect","date":"2026-11-26"},
-{"id":"m_diag04","wrong":"Not only he was late, but…","right":"Not only was he late, but…","why":"Gap boshida Not only → inversion","date":"2026-11-26"},
-{"id":"m_diag05","wrong":"She suggested to postpone the meeting.","right":"She suggested postponing the meeting.","why":"suggest + -ing","date":"2026-11-26"}
-]
+ "notes": [
+  {
+   "id": "s01",
+   "cat": "Strategiya",
+   "title": "Maqsad xaritasi: A2 dan IELTS 7 gacha",
+   "body": "Bu sahifa butun yo'lning rasmini beradi. Raqamlar taxminiy: ular odatiy o'rtacha ko'rsatkichlar, sizning tezligingiz boshqacha bo'lishi mumkin.\n\n## Darajalar jadvali\n\n| Navigate darajasi | CEFR | IELTS (taxminan) | Nimani bildiradi |\n|---|---|---|---|\n| Beginner | A1 | 2.0–3.0 | Oddiy gaplar, o'zi haqida 3–4 gap |\n| Elementary | A2 | 3.0–4.0 | Kundalik mavzu, qisqa matn. **Siz hozir shu yerdasiz** |\n| Pre-Intermediate | B1- | 4.0–4.5 | Oddiy fikr bildirish, xat yozish |\n| Intermediate | B1 | 4.5–5.5 | Mavzu bo'yicha 1–2 daqiqa gapira olish |\n| Upper-Intermediate | B2 | 5.5–6.5 | Erkin muhokama, akademik matnning asosiy qismi |\n| IELTS 7.0 | C1 (quyi) | 7.0 | Murakkab matn, izchil dalil, keng lug'at |\n\n> **Halol baho:** IELTS 7.0 ning o'zi B2 dan yuqori, ya'ni C1 ning boshlanishi. Navigate Intermediate (B1) ni tugatish IELTS 7 ning yarmi ham emas, bu yo'lning to'g'ri boshlanishi. Shuning uchun reja uch pog'onali.\n\n## Uch pog'onali reja\n\n1. **1-pog'ona (taxminan 8 oy): Intermediate ga yetish.** Asos quriladi: grammatika, taxminan 2000 so'z, talaffuz, oddiy writing. Bu saytdagi 238 kunlik reja.\n2. **2-pog'ona (taxminan 6–8 oy): B2 / IELTS 5.5–6.0.** Navigate Upper-Intermediate, Azar Blue (tanlab), Destination B2, IELTS formatiga tanishish.\n3. **3-pog'ona (taxminan 6–9 oy): IELTS 7.** Destination C1, Abror materiallari, Multilevel mock testlar, Writing va Speaking bo'yicha qattiq fikr-mulohaza.\n\nBir CEFR darajasi uchun odatda 150–200 soatlik jiddiy o'qish kerak deb hisoblanadi. Kuniga 90 daqiqa bilan oyiga taxminan 45 soat chiqadi. Demak, 8 oy taxminan 350 soat: bu B1 uchun yetarli, B2 uchun esa boshlanish.\n\n## Nega oldin IELTS emas\n\nHozir lug'at hali kichik, writing endi shakllanyapti. IELTS materiallari shu bosqichda faqat yuqori darajali matn bilan bosim o'tkazadi, o'rganish bo'lmaydi. Avval asos, keyin format.\n\n## Har 3 haftada nima qilinadi\n\n- Diagnostik qayta baholash: grammatika testi, 100–150 so'zlik writing, 2 daqiqalik ovozli javob.\n- Xatolar daftari tahlili: qaysi xatolar kamaymadi?\n- Rejani moslash: eng zaif ko'nikmaga ko'proq vaqt.",
+   "ord": 1,
+   "date": null
+  },
+  {
+   "id": "s02",
+   "cat": "Strategiya",
+   "title": "Kunlik va haftalik tizim: 90 daqiqa qanday ishlaydi",
+   "body": "## Dushanba–shanba (90 daqiqa)\n\n| Blok | Daqiqa | Nima qilinadi |\n|---|---|---|\n| Lug'at | 20 | 4000 Essential Words: 10 ta yangi so'z va takrorlash |\n| Navigate | 40 | Coursebook darsi yoki Workbook |\n| Grammatika (Du, Chor, Ju) | 20 | Azar: chart, mashq, 3 ta o'z gapingiz |\n| Talaffuz (Se, Pay, Sha) | 20 | Pronunciation in Use: unit, audio, shadowing |\n| Writing | 10 | Kun vazifasi, so'ng xatolarni xatolar daftariga yozish |\n\n> 23-haftadan boshlab lug'at 15, writing 15 daqiqa bo'ladi.\n\n## Yakshanba (40 daqiqa)\n\n| Blok | Daqiqa | Nima qilinadi |\n|---|---|---|\n| Lug'at takrori | 15 | Flashcard |\n| Writing | 10 | Haftaning mavzusida matn |\n| Mini test | 15 | Test va xatolar daftarini qayta o'qish |\n\nVaqt blokiga rioya qiling, ammo \"dars tugadi\" degan belgi daqiqa bilan emas, vazifa bajarilgani bilan qo'yiladi.\n\n## Qoidalar\n\n1. **Muntazamlik intensivlikdan ustun.** Haftada bir kuni 7 soatdan ko'ra, har kuni 90 daqiqa ancha samarali, chunki xotira interval takrorlashda mustahkamlanadi.\n2. **Bir kun o'tkazib yuborsangiz**, ertasiga ikki baravar o'qimang. Saytda navbatdagi kun sizni kutadi: shu kundan davom eting.\n3. **Telefon boshqa xonada.** 25 daqiqalik bloklarda (Pomodoro) ishlang, 5 daqiqa tanaffus. Saytdagi taymer shu uchun.\n4. **Har kuni kamida bir marta ovoz chiqarib gapiring.** Ko'z bilan o'qish nutqni rivojlantirmaydi.",
+   "ord": 2,
+   "date": null
+  },
+  {
+   "id": "s03",
+   "cat": "Strategiya",
+   "title": "Progressni halol o'lchash",
+   "body": "Eng xavfli narsa: \"o'qidim\" va \"o'rgandim\" ni aralashtirish. O'lchov bo'lmasa, o'sish ham ko'rinmaydi.\n\n## Har unit oxirida\n\n- Workbook yoki Azar mashqlarini **javobga qaramasdan** bajaring, keyin tekshiring.\n- Natija 85% va undan yuqori bo'lsa, keyingisiga o'ting.\n- 70–85%: xatolar daftariga yozing, 2 kundan keyin xato qilingan mashqlarni qayta bajaring, so'ng o'ting.\n- 70% dan past: mavzuni qaytadan o'qing. Faqat bunday holda orqaga qaytiladi.\n\n## Haftalik tekshiruv (yakshanba)\n\n| Ko'rsatkich | Maqsad |\n|---|---|\n| Bajarilgan vazifalar | 85% va undan ko'p |\n| Yangi so'zlar (SRS ga kirgan) | 40–60 |\n| Xatolar daftarida yangi yozuv | har kuni 2–5 |\n| Writing | haftalik rejadagi hajmda (3 gapdan 220–250 so'zgacha) |\n| Ovozli yozuv | 1 ta 1–2 daqiqalik |\n\n## 3 haftalik baholash\n\nQuyidagi 4 narsani sana bilan yozib boring: grammatika testi balli, bir mavzu bo'yicha eslab qolgan so'zlar soni, writing namunasi, ovozli yozuv. Eski bilan yangisini solishtirsangiz, o'zgarish ko'zga ko'rinadi.\n\n> Natija yomon chiqsa ham bu ma'lumot, mag'lubiyat emas. Qaysi ko'nikma orqada qolayotganini aynan shu ko'rsatadi.",
+   "ord": 3,
+   "date": null
+  },
+  {
+   "id": "s04",
+   "cat": "Strategiya",
+   "title": "Kutubxona xaritasi: qaysi kitob nima uchun",
+   "body": "Asosiy kitoblar `D:\\English language` papkasida. Hammasini bir vaqtda ochish xato. Har kitobning vazifasi bor:\n\n| Kitob / papka | Vazifa | Qachon |\n|---|---|---|\n| Navigate A1 → B2 | Asosiy darslik: 4 ko'nikma | Har kuni 40 daqiqa |\n| Betty Azar Red / Black / Blue | Grammatika | Haftada 3 kun, 20 daqiqa |\n| Red's rules, Red's vocabulary (docx) | Azar Red uchun yordamchi fayllar | Takrorlashda |\n| 4000 Essential English Words 1–6 | Asosiy so'z boyligi | Har kuni 20 daqiqa (23-haftadan 15) |\n| Pronunciation in Use (3 daraja) + Work on Your Accent | Talaffuz va eshitish | Haftada 3 kun, 20 daqiqa |\n| Destination B1 / B2 / C1&C2 | Grammatika va lug'at (yuqori daraja) | Rejadan keyingi bosqichlar |\n| Test Attack, Test Master, Advanced Grammar Tests | Tekshiruv testlari | Bo'lim oxirlarida |\n| Multilevel (Listening, Reading, 10 mock) | Imtihon formatida mashq | B1+ dan boshlab |\n| Abror teacher's books | IELTS: Listening, Reading, Writing, Speaking | B2 ga yaqinlashganda |\n| A1-C2 Data Englishprofile (xlsx) | So'z va darajalar ma'lumotnomasi | Kerak bo'lganda |\n| Mohida Teacher's General Course | Dars yozuvlari | 12–13-haftalar va takrorlash |\n\n## Qoida: \"bir asosiy, bir yordamchi\"\n\nHar bir ko'nikma uchun bitta asosiy manba tanlanadi. Boshqalari faqat yordam beradi. Masalan, grammatikada asosiy kitob Azar, Navigate dagi grammatika bo'limi esa yordamchi. Ikkita grammatika kitobini parallel o'tishga urinish chalkashlik beradi.\n\n## Bosqichma-bosqich ochilish tartibi\n\n1. **1–3-oy (1–13-haftalar):** Navigate Beginner tekshiruvi → Elementary → Pre-Intermediate boshi, Azar Red (12–13-haftalarda Mohida darslari), EW 1–2, Pron. Elementary.\n2. **4–5-oy (14–22-haftalar):** Navigate Pre-Intermediate, Azar Black, EW 2–3, Pron. Intermediate.\n3. **6–8-oy (23–34-haftalar):** Navigate Intermediate, Azar Black, EW 3–4, Pron. Intermediate.\n4. **B2 bosqichi:** Navigate Upper-Intermediate, Destination B1–B2, EW 5–6, Azar Blue (tanlab), test kitoblari.\n5. **IELTS bosqichi:** Abror materiallari, Multilevel mock, Destination C1&C2, Pron. Advanced.",
+   "ord": 4,
+   "date": null
+  },
+  {
+   "id": "k01",
+   "cat": "Kitoblar",
+   "title": "Navigate (A1 → B2): qanday ishlash kerak",
+   "body": "**Papka:** `Navigate\\` va `Новая папка\\2)Inglis-tili\\4-Navigate (Skill book)\\`. Har darajada Coursebook va Workbook bor: Beginner, Elementary, Pre-Intermediate, Intermediate, Upper-Intermediate.\n\n## Kitob nima beradi\n\nHar unit 4 darsdan va bir \"Vocabulary and skills development\" qismidan iborat: Reading, Listening, Speaking, Writing bitta mavzu atrofida birlashadi. Unit oxirida video va Review bor. Shu sababli Navigate ni boshqa kitoblardan \"o'zakka\" aylantirish qulay.\n\n## Coursebook bilan ishlash\n\n### Reading\n1. **Skimming (60 soniya):** sarlavha, rasm va birinchi xatboshiga qarab matn nima haqida ekanini taxmin qiling.\n2. **Scanning:** savollarni oldin o'qing, kalit so'zni belgilab, faqat shu joyni qidiring.\n3. **Chuqur o'qish:** bog'lovchilar (however, although, because) va notanish iboralarni tahlil qiling. Har bir yangi so'zni emas, faqat takrorlangan yoki mavzuga tegishlisini yozing.\n\n### Listening: 3 marta eshitish\n1. **Gist:** to'xtatmasdan eshiting. Kim? Qayerda? Nima haqida?\n2. **Detail:** savollarga qarab, kerakli joyda to'xtatib javob yozing.\n3. **Audioscript:** matnni ochib, eshitib turing. Eshitmagan joylaringizni qalam bilan belgilang. Ular odatda ulanib ketgan yoki kuchsiz aytilgan so'zlar (connected speech, weak forms) bo'ladi.\n\n### Speaking\nMashqni o'qib qo'ymang. Telefon diktofonini yoqib, **1–2 daqiqa** uzluksiz javob bering. Qayta eshiting: to'xtalishlar, takrorlar, grammatika xatolari. Keyin bir marta yaxshiroq variantni yozib, yana yozing.\n\n### Writing\nKitobdagi namuna matnni avval tahlil qiling: qaysi gap nima vazifani bajaradi? Keyin o'z mavzuingizda yozing, namunadagi 3–4 ibora/bog'lovchini ishlating.\n\n## Workbook\n\nCoursebook dars tugagandan keyin **kamida bir necha soat yoki ertasiga** bajariladi. Shunda siz o'qiganingizni emas, **eslab qolganingizni** tekshirasiz.\n\n## Navigate bo'yicha tez-tez uchraydigan xatolar\n\n- Tinglashni \"tushunmadim\" deb o'tkazib yuborish. Aynan shu joy eng ko'p o'sadigan joy.\n- Faqat Coursebook ni qilib, Workbook ni tashlab ketish.\n- Videoga o'tib ketish: video yaxshi, ammo sarlavha va savollarsiz foyda kam.",
+   "ord": 10,
+   "date": null
+  },
+  {
+   "id": "k02",
+   "cat": "Kitoblar",
+   "title": "4000 Essential English Words (1–6): lug'at tizimi",
+   "body": "**Papka:** `Essential Books\\`. 6 ta kitob, har birida 30 ta unit, har unitda 20 ta so'z. Jami taxminan 3600 ta so'z. Kitoblar ketma-ket murakkablashadi: 1-kitob eng oson, 6-kitob eng qiyin.\n\n## Maqsad\n\nSo'zni ro'yxatdan yodlash emas, **faol lug'atga** aylantirish: ya'ni gapda o'zingiz ishlata olish.\n\n## Har unit bo'yicha tartib (2 kun: 1–10 va 11–20 so'zlar, kuniga 20 daqiqa)\n\n1. **Ta'rif va misol gap:** inglizcha ta'rifni o'qing, rasm va misolni tahlil qiling. So'z turkumiga e'tibor bering (ot, fe'l, sifat).\n2. **Talaffuz:** urg'u qaysi bo'g'inda? 3 marta baland ovozda ayting.\n3. **O'zingizning gapingiz:** kitobdagi gapni ko'chirmang, o'z hayotingizdan **1 ta real gap** yozing.\n   - So'z: `afraid`. Sizning gapingiz: *I'm not afraid of making mistakes when I speak English.*\n4. **Mashqlar yozma:** javoblarni oxirida tekshiring.\n5. **Hikoya:** 1) tez o'qish, 2) yangi so'zlarni tagiga chizish, 3) ovoz chiqarib o'qish.\n\n## Interval takrorlash (SRS)\n\nSaytdagi Lug'at bo'limi Leitner qutilari bilan ishlaydi: 1 → 2 → 4 → 7 → 14 kun. Xato qilingan so'z 1-qutiga qaytadi. Har kuni **faqat \"bugun takrorlanadigan\" so'zlar** chiqadi.\n\n> Tavsiya: bitta unitdan hammasini emas, 10–12 eng muhim so'zni tanlab SRS ga qo'shing. 20 ta so'zni qirq kun takrorlashdan ko'ra, 10 ta so'zni mukammal bilish foydali.\n\n## Tezlik\n\n| Davr (reja bo'yicha) | Ritm | Jami ko'rilgan so'z |\n|---|---|---|\n| 1-kitob: 1–10-haftalar | haftada 3 unit | 600 |\n| 2-kitob: 11–20-haftalar | haftada 3 unit | 1200 |\n| 3-kitob: 21–30-haftalar | haftada 3 unit | 1800 |\n| 4-kitob (1–12-unit): 31–34-haftalar | haftada 3 unit | taxminan 2040 |\n| 5–6-kitob: keyingi bosqich | haftada 2–3 unit | 3600 gacha |\n\n## Qanday tekshiriladi\n\nUnitdan keyin 2 kun o'tgach ro'yxatni yoping va faqat inglizcha ta'rifga qarab so'zni eslang. 70% dan past bo'lsa, SRS ga qo'shish soni kamaytirilmaydi, takrorlash kuchaytiriladi.",
+   "ord": 11,
+   "date": null
+  },
+  {
+   "id": "k03",
+   "cat": "Kitoblar",
+   "title": "Betty Azar: Red, Black, Blue",
+   "body": "**Papka:** `Grammar book\\` va `...\\3-Grammar books\\`. Uch kitob uch darajaga mos keladi:\n\n| Rang | Daraja | Qachon |\n|---|---|---|\n| Red (Basic English Grammar) | A1–A2 / B1 boshi | 1–11-haftalar |\n| Black (Fundamentals of English Grammar) | B1–B2 | 14–34-haftalar |\n| Blue (Understanding and Using English Grammar) | B2–C1 | Rejadan keyin, tanlab |\n\nReja bo'yicha Azar: dushanba, chorshanba va juma, 20 daqiqadan. 12–13-haftalarda Azar o'rniga Mohida kursi darslari turadi. **Red's rules.docx** va **Red's vocabulary.docx** fayllarini takrorlashda yordamchi sifatida oching.\n\nBlack va Blue nomlari fayllar nomidan olindi. Ularning ichini hali ochib tekshirmadik, mavzu tartibi keyinroq aniqlanadi.\n\n## Har bo'lim bilan ishlash\n\n1. **Chartni tahlil qiling:** Form (qanday yasaladi), Meaning (nimani bildiradi), Use (qachon ishlatiladi).\n2. **Controlled practice:** bo'sh joyni to'ldirish va variant tanlash mashqlarini yozma bajaring. Har javob uchun \"nega?\" ga javob bering.\n3. **Feynman usuli:** qoidani xuddi yangi boshlovchiga o'tayotgandek ovoz chiqarib tushuntiring. Tushuntira olmasangiz, tushunmagansiz.\n4. **Erkin yozish:** mavzuga 3 ta o'z gapingizni yozing (Past Simple bo'lsa, kecha nima qilganingiz).\n\n## Sizning kuzatilgan xatolaringiz (diagnostikadan)\n\nQuyidagi 5 ta nuqta Grammatika bo'limida alohida notelar bilan yoritilgan: he/she/it + -s, neither of + birlik fe'l, wish, gerund yoki infinitive, Not only … but also inversiyasi. Azar da shu mavzularning mashqlarini topganingizda, **avval shularni** bajaring.\n\n## Odatdagi xato\n\nMashqni \"ko'z bilan\" bajarish. Grammatikada faqat **yozilgan** javob hisoblanadi.",
+   "ord": 12,
+   "date": null
+  },
+  {
+   "id": "k04",
+   "cat": "Kitoblar",
+   "title": "Pronunciation in Use + Work on Your Accent",
+   "body": "**Papka:** `Pronunciation book\\` va `...\\1-Pronunciation book\\` (Elementary, Intermediate, Advanced, va \"Work on Your Accent\").\n\n## Tartib\n\n| Kitob | Qachon | Maqsad |\n|---|---|---|\n| Elementary | 1–13-haftalar | Alifbo tovushlari, urg'u, oddiy intonatsiya |\n| Intermediate | 14–34-haftalar | Bog'langan nutq, kuchsiz shakllar, ritm |\n| Advanced | IELTS bosqichi | Intonatsiya, urg'u ma'no o'zgartirishi |\n| Work on Your Accent | Istalgan paytda | Tovushlarni aniq ajratish |\n\nHar unit bitta chap sahifa (tushuntirish) va bitta o'ng sahifa (mashq) dan iborat, audio bilan.\n\n## Seshanba, payshanba, shanba: 20 daqiqa\n\n1. **Minimal juftliklar.** `ship / sheep`, `live / leave`. Eshitib, qaysi biri aytilganini belgilang.\n2. **Urg'u.** Qaysi bo'g'in kuchli va cho'ziq? Yangi so'zning urg'usini har doim lug'atdan tekshiring.\n3. **Shadowing.** Bitta jumlani eshiting, pauza qiling va spiker bilan bir xil tezlik va ohangda takrorlang. 0,5 soniya orqadan.\n4. **O'z ovozingizni yozing** va spikerniki bilan solishtiring.\n\n## O'zbek tilida so'zlashuvchilar uchun odatiy muammolar\n\nBu umumiy kuzatuv, sizning ovozingiz hali tekshirilmagan:\n\n- `th` tovushlari (`think`, `this`) ko'pincha `s`, `z` yoki `t`, `d` bo'lib ketadi.\n- `w` va `v` aralashadi.\n- So'z urg'usi so'z oxirida emas, kerakli bo'g'inda bo'lishi kerak.\n- Gap ohangi: inglizchada tushuvchi/ko'taruvchi ohang ma'noni o'zgartiradi.\n\n> Eng samarali signal: o'zingizning yozuvingizni eshitish. Bu noqulay, lekin 1 oyda sezilarli farq beradi.",
+   "ord": 13,
+   "date": null
+  },
+  {
+   "id": "k05",
+   "cat": "Kitoblar",
+   "title": "Destination B1, B2, C1&C2 (grammatika va lug'at)",
+   "body": "> Bu kitob 238 kunlik rejaga kirmaydi. Rejadagi vazifalar bajarilgandan keyin vaqt qolsa yoki keyingi bosqichda ishlating.\n\n**Papka:** `...\\2-Vocabulary book Destination\\` (B1, B2, C1-2). Ichida o'zbekcha tarjimali B1 fayli va phrasal verblar uchun alohida PDF ham bor.\n\n## Vazifasi\n\nDestination yuqori daraja uchun \"grammatika + lug'at\" kitobi: unitlar mavzu bo'yicha, har birida tushuntirish, mashq va takrorlash. Navigate dan keyingi bosqichda, ayniqsa B2 va undan yuqorida kerak bo'ladi.\n\n## Qachon boshlanadi\n\n| Kitob | Qachon |\n|---|---|\n| Destination B1 | Intermediate bosqichining ikkinchi yarmi (5–8-oy) |\n| Destination B2 | B2 bosqichi, asosiy kitob |\n| Destination C1&C2 | IELTS 6.5+ dan keyin, tanlab |\n| Phrasal verbs fayli | B1 dan boshlab, haftada 5–8 ta |\n\n## Qanday ishlatiladi\n\n1. Unitni o'qing, **faqat 10–15 ta foydali iborani** ajratib oling (hammasini emas).\n2. Mashqni yozma bajaring, keyin javobni tekshiring.\n3. Ajratilgan iboralarni gap ichida yozing va SRS ga qo'shing.\n4. **Phrasal verblar:** bitta fe'l bilan bir guruh (`take off / take up / take over`) o'rganing, bitta ma'noga bitta o'z gapingiz.\n\n> B1 faylidagi o'zbekcha tarjima faqat birinchi ko'rishda yordam, keyin inglizcha ta'rifga o'ting. Tarjimaga qaramlik nutqni sekinlashtiradi.",
+   "ord": 14,
+   "date": null
+  },
+  {
+   "id": "k06",
+   "cat": "Kitoblar",
+   "title": "Test kitoblari: Test Attack, Test Master, Advanced Grammar Tests",
+   "body": "> Bu kitob 238 kunlik rejaga kirmaydi. Rejadagi vazifalar bajarilgandan keyin vaqt qolsa yoki keyingi bosqichda ishlating.\n\n**Papka:** `...\\2)Inglis-tili\\Tests\\`. Bu fayllar nomlariga qarab test to'plamlari. Ichki mazmuni hali tekshirilmagan, shuning uchun quyida umumiy foydalanish qoidasi beriladi.\n\n## Qachon ishlatiladi\n\nTestlar o'rganish emas, **tekshirish** vositasi. Shuning uchun:\n\n- Mavzu tugagach (har 2–3 hafta oxirida).\n- Daraja o'tish oldidan (masalan, Elementary → Pre-Intermediate).\n- Hech qachon yangi mavzuni testdan o'rganmang.\n\n## Test tartibi\n\n1. Vaqtni belgilang (savol soniga qarab, o'rtacha 1 daqiqa).\n2. Lug'at va qoidaga qaramang.\n3. Javoblarni yozing, **keyin** tekshiring.\n4. Har xatoni xatolar daftariga: noto'g'ri, to'g'ri, **nega** (qoida nomi).\n5. 2–3 kundan keyin xato qilingan savollarni qayta yeching.\n\n## Natijani o'qish\n\n| Natija | Nima qilinadi |\n|---|---|\n| 85%+ | Keyingi daraja |\n| 70–85% | Xatolar mavzusini Azar/Destination dan qayta, so'ng davom |\n| 70% dan past | Mavzuni boshidan, 1 hafta qo'shimcha |\n\n> Xato turlarini sanang. Agar 5 ta xatoning 3 tasi bitta mavzudan bo'lsa, bu tasodif emas, o'sha mavzu uchun alohida kun ajrating.",
+   "ord": 15,
+   "date": null
+  },
+  {
+   "id": "k07",
+   "cat": "Kitoblar",
+   "title": "Multilevel kitoblari: Listening, Reading, 10 ta mock",
+   "body": "> Bu kitob 238 kunlik rejaga kirmaydi. Rejadagi vazifalar bajarilgandan keyin vaqt qolsa yoki keyingi bosqichda ishlating.\n\n**Papka:** `...\\Books\\Multilevel books\\` (Listening + answers, Reading + answers, \"Multilevel Master 10 mock tests\").\n\nMultilevel O'zbekistonda CEFR bo'yicha milliy til sertifikati imtihoni hisoblanadi. Uning formati IELTS dan farq qiladi, lekin Reading, Listening, Writing va Speaking asoslari umumiy, shuning uchun bu materiallar IELTS tayyorgarligiga ham foyda beradi.\n\n## Qachon boshlanadi\n\nB1 ning oxirida (taxminan 6–8-oy) birinchi mashq; to'liq mock testlar B2 bosqichida.\n\n## Reading\n\n1. Matn va savollarni **vaqtni belgilab** bajaring. Boshlanishida vaqtni chegaralamang, faqat tartibni o'rganing.\n2. Javoblarni tekshirib, **har xato uchun sabab** yozing: so'z tushunilmadi / savol noto'g'ri o'qildi / vaqt yetmadi / o'ylab topdim.\n3. Xato sabablari sanog'i sizga qayerda o'sish kerakligini aytadi.\n\n## Listening\n\nNavigate dagi 3 marta eshitish tartibi shu yerda ham. Imtihon sharoitida esa audioni **bir marta** eshitasiz, shuning uchun mashqning yarmini \"bir marta eshitish\" bilan qiling.\n\n## 10 ta mock test\n\n- Haftada 1 ta, to'liq, tanaffussiz.\n- Ketma-ket emas, orasida kamida 3–4 kun tahlil.\n- Natijalar jadvali: sana, ball, eng zaif qism.\n\n## Kerak bo'lmasa\n\nHozir (A2/B1-) mock testlar sizni ruhan tushiradi. Ularni 6-oydan keyin boshlang.",
+   "ord": 16,
+   "date": null
+  },
+  {
+   "id": "k08",
+   "cat": "Kitoblar",
+   "title": "IELTS: Listening va Reading materiallari (Abror teacher's books)",
+   "body": "**Papka:** `...\\Books\\Abror teacher's books\\` (Listening, Reading va Reading answers, Articles, Grammar, Topical_Vocabularies). Fayllar nomlariga qarab tuzildi.\n\n## IELTS formati (qisqa)\n\n| Bo'lim | Vaqt | Savollar | Eslatma |\n|---|---|---|---|\n| Listening | 30 daq (+10 daq javobni ko'chirish, qog'ozli testda) | 40 | 4 qism, audio **bir marta** |\n| Reading (Academic) | 60 daq | 40 | 3 matn, ko'chirishga qo'shimcha vaqt yo'q |\n| Writing | 60 daq | 2 task | Task 1: 20 daq, 150 so'z. Task 2: 40 daq, 250 so'z |\n| Speaking | 11–14 daq | 3 qism | Yuzma-yuz suhbat |\n\n## Reading: savol turlari bo'yicha usullar\n\n| Savol turi | Usul |\n|---|---|\n| True / False / Not Given | **Not Given** = matnda umuman yo'q. False = matnga **zid**. Taxmin qilmang, faqat matndagiga tayaning |\n| Matching headings | Avval xatboshining **asosiy g'oyasini** toping, so'zlarning o'zi bilan emas |\n| Sentence/summary completion | So'z soni cheklovini va grammatik shaklni tekshiring |\n| Multiple choice | Noto'g'ri variantlar ko'pincha matndagi so'zni ishlatadi, ammo ma'noni buzadi |\n\n### Paraphrase ko'rish\n\nIELTS savoli matndagi so'zni deyarli hech qachon aynan ishlatmaydi. `increase` → `rise`, `many people` → `a large proportion`. Shuning uchun har kuni 5 ta paraphrase juftini yozib boring.\n\n## Listening\n\n1. Savollarni o'qish uchun berilgan vaqtda **kalit so'zlarni** belgilang.\n2. Javob ko'pincha **tuzatiladi** (\"Tuesday... no, sorry, Wednesday\"). Oxirgi variant to'g'ri.\n3. Imlo va ko'plik (-s) bo'yicha ball ketadi, shuning uchun yozishga e'tibor.\n\n## Topical_Vocabularies\n\nMavzu bo'yicha lug'at ro'yxati. Har mavzudan **15–20 ta iboralarni** (kollokatsiya) tanlang, yakka so'zlarni emas: `tackle unemployment`, `raise awareness`.\n\n## Qachon\n\nBu materiallar B2 ga yaqinlashganda (taxminan 12–14-oydan) asosiy ishga tushadi. Hozir ular bilan faqat tanishish va savol turlarini ko'rish yetarli.",
+   "ord": 17,
+   "date": null
+  },
+  {
+   "id": "k09",
+   "cat": "Kitoblar",
+   "title": "IELTS Writing: Task 1, Task 2, namunalar",
+   "body": "**Papka:** `...\\Abror teacher's books\\Writing\\` (Writing_Task1, Writing_Task2, Sample letters T1, Writing Task 2 Grammar V1, Multi-Level Writing Sheets).\n\n## Task 1 va Task 2 farqi\n\n| | Task 1 | Task 2 |\n|---|---|---|\n| Nima | Grafik/jadval/jarayonni yoki xatni tasvirlash | Fikr, muhokama, muammo-yechim |\n| Hajm | 150 so'z | 250 so'z |\n| Vaqt | 20 daq | 40 daq |\n| Ball og'irligi | 1/3 | 2/3 |\n\n**Task 2 ball jihatidan ikki barobar muhim.** Vaqt bo'linishi shunga mos bo'ladi.\n\n## 4 mezon (har biri 25%)\n\n1. **Task Achievement / Response:** savolga to'liq javob, pozitsiya aniq.\n2. **Coherence & Cohesion:** xatboshilar va bog'lovchilar mantiqiy.\n3. **Lexical Resource:** so'z boyligi va aniqligi.\n4. **Grammatical Range & Accuracy:** gap turlari xilma-xil va xatosiz.\n\n## Task 2 uchun tuzilma\n\n1. **Kirish (2 gap):** mavzuni o'z so'zingiz bilan qayta yozing + pozitsiya.\n2. **1-asosiy xatboshi:** fikr → izoh → misol.\n3. **2-asosiy xatboshi:** fikr → izoh → misol.\n4. **Xulosa (1–2 gap):** pozitsiyani qaytaring, yangi g'oya qo'shmang.\n\n## Writing sikli (haftada 1–2 marta)\n\n1. Rejani 3–5 daqiqada yozing (g'oya, misol).\n2. Yozing. 3. Qayta o'qib, xatolarni toping. 4. Namunadagi 5 ta foydali iborani ajratib oling.\n5. Xato va yaxshiroq variantni xatolar daftariga yozing. 6. **Bir hafta o'tgach** o'sha mavzuni qayta yozing.\n\n> Writing ni Claude ga yuboring: 4 mezon bo'yicha ball, 3 ta takrorlanuvchi xato va eng zaif xatboshi uchun yaxshilangan variant olasiz.\n\n## Qachon\n\nHozir Task 2 emas, **oddiy 80–120 so'zli matn** (o'zingiz, oilangiz, shahar). IELTS Task 1/2 ni B2 ga yaqin (12-oydan) boshlang.",
+   "ord": 18,
+   "date": null
+  },
+  {
+   "id": "k10",
+   "cat": "Kitoblar",
+   "title": "IELTS Speaking: Part 1, 2, 3 va mavzu lug'ati",
+   "body": "**Papka:** `...\\Abror teacher's books\\Speaking\\` (Part1, Part2, Part3) va `Topical_Vocabularies.pdf`.\n\n## Tuzilma\n\n| Qism | Vaqt | Nima |\n|---|---|---|\n| Part 1 | 4–5 daq | Kundalik mavzu (uy, ish, qiziqish): qisqa javoblar |\n| Part 2 | 3–4 daq | Karta bo'yicha **1–2 daqiqa** monolog, 1 daqiqa tayyorgarlik |\n| Part 3 | 4–5 daq | Part 2 mavzusi bo'yicha mavhum muhokama |\n\n## Baholash mezonlari\n\nFluency & Coherence, Lexical Resource, Grammatical Range & Accuracy, Pronunciation. **Har biri teng 25%.**\n\n## Part 2 uchun \"daraxt\" usuli\n\nKarta: *Describe a place you like.* Tayyorgarlik vaqtida kalit so'zlarni emas, **tuzilmani** yozing:\n\n1. Nima / qayerda (1–2 gap).\n2. Nega sizga yoqadi (2–3 sabab).\n3. Bitta aniq voqea yoki xotira.\n4. Hozirgi his.\n\n## Part 3 uchun javob qolipi\n\n**Pozitsiya → sabab → misol → (ehtimol) qarama-qarshi tomon.**\n*\"I think it's mainly because... For example,... However, in some cases...\"*\n\n## Mashq\n\n1. Har kuni 1 ta savolni telefonga yozing (1 daqiqa).\n2. Qayta eshiting: **takrorlar (um, like, you know), to'xtalishlar, xato.**\n3. Yaxshiroq variantda yana yozing.\n4. Bir mavzuning 5 ta foydali iborasini SRS ga qo'shing.\n\n## Boshlang'ich bosqichda\n\nHozir maqsad \"chiroyli\" gapirish emas, **to'xtamasdan 30–60 soniya** gapirish. Xatoga yo'l qo'yishdan qo'rqmang: ravonlik avval, aniqlik keyin.",
+   "ord": 19,
+   "date": null
+  },
+  {
+   "id": "k11",
+   "cat": "Kitoblar",
+   "title": "Mohida Teacher's General Course",
+   "body": "**Papka:** `1)Mohida Teacher's General Course\\` (20 ta dars papkasi, 23-oktabrdan 20-noyabrgacha; ba'zilarida \"Notes\" ichki papkasi bor).\n\nBu sizning kursda qilgan dars materiallaringiz va yozuvlaringiz. Alohida kitob emas, balki **o'zingizning o'tgan bilimingiz arxivi**.\n\n## Qanday ishlatiladi\n\n1. **Takrorlash manbasi.** Navigate ni o'tayotganda mavzu o'tgan darsda bo'lgan bo'lsa, shu papkani ochib qiyoslang.\n2. **Yozuvlardan xatolar daftari uchun material.** Kursda sizga aytilgan tuzatishlar: ular siz uchun eng shaxsiy xatolar.\n3. **Notes papkasi.** Oxirgi darslar yozuvlarini bu sahifadagi notelar bilan birlashtiring (bir mavzu = bitta note).\n\n## Maslahat\n\nRejada 12–13-haftalarda 8, 11–14, 16, 19 va 20-darslar asosiy grammatika manbai. Qolgan materiallarni yangidan o'rganishga urinmang. Ular uchun bir marta o'qib chiqib (30 daqiqa), eng muhim 10 ta nuqtani saytga note qilib yozing.",
+   "ord": 20,
+   "date": null
+  },
+  {
+   "id": "n01",
+   "cat": "Usullar",
+   "title": "Kunlik 90 daqiqa tartibi",
+   "body": "Batafsil jadval **Strategiya** bo'limidagi \"Kunlik va haftalik tizim\" notesida.\n\n## Qisqa xulosa\n\n- **Du–Sha:** lug'at 20, Navigate 40, grammatika (Du, Chor, Ju) yoki talaffuz (Se, Pay, Sha) 20, writing 10 daqiqa. 23-haftadan lug'at 15, writing 15.\n- **Yakshanba (40 daqiqa):** lug'at takrori, writing, mini test.\n- Har kuni kamida **bir marta ovoz chiqarib** gapiring va **bir marta yozing**.\n\n> Bir kun o'tkazsangiz, ertasiga ikki baravar qilmang. Keyingi kundan davom eting.",
+   "ord": 30,
+   "date": null
+  },
+  {
+   "id": "n02",
+   "cat": "Usullar",
+   "title": "Navigate bilan qanday ishlash kerak",
+   "body": "To'liq qo'llanma **Kitoblar → Navigate** notesida. Qisqa tartib:\n\n1. **Reading:** skim → scan → chuqur o'qish.\n2. **Listening:** gist → detail → audioscript bilan eshitish.\n3. **Speaking:** 1–2 daqiqalik ovozli yozuv.\n4. **Workbook:** Coursebook dan keyin kamida ertasiga.",
+   "ord": 31,
+   "date": null
+  },
+  {
+   "id": "n03",
+   "cat": "Usullar",
+   "title": "Beginner tezkor tekshiruvi (85% qoidasi)",
+   "body": "Navigate Beginner bo'limini boshidan o'qimaymiz, **tekshiramiz**.\n\n1. Beginner Workbook dan bir unitni javobga qaramay bajaring.\n2. 85% va undan yuqori bo'lsa, shu unitni o'tkazib yuboring.\n3. 85% dan past bo'lsa, shu unit mavzularini Elementary bilan birga takrorlang.\n4. Natijalarni Progress sahifasidagi test yozuviga qo'shing.\n\nMaqsad: bilgan narsangizni qayta o'qib vaqt yo'qotmaslik, va bilmaganingizni yashirmaslik.",
+   "ord": 32,
+   "date": null
+  },
+  {
+   "id": "n04",
+   "cat": "Usullar",
+   "title": "So'z yodlash: 4000 Essential Words",
+   "body": "To'liq tizim **Kitoblar → 4000 Essential English Words** notesida. Qisqa qoidalar:\n\n- Ro'yxatni emas, **ta'rif + o'z gapingizni** yodlang.\n- Bir unitdan **10–12 muhim so'z**ni SRS ga qo'shing.\n- Takrorlash: 1 → 2 → 4 → 7 → 14 kun.\n- Har hafta oxirida ro'yxatni yoping va faqat inglizcha ta'rifdan eslang.",
+   "ord": 33,
+   "date": null
+  },
+  {
+   "id": "n05",
+   "cat": "Usullar",
+   "title": "Azar va Pronunciation bilan ishlash",
+   "body": "Batafsil: **Kitoblar → Betty Azar** va **Kitoblar → Pronunciation in Use**.\n\n- **Azar:** chart → yozma mashq → Feynman → 3 ta o'z gapingiz.\n- **Pronunciation:** minimal juftlik → urg'u → shadowing → o'zingizni yozib solishtirish.",
+   "ord": 34,
+   "date": null
+  },
+  {
+   "id": "u01",
+   "cat": "Usullar",
+   "title": "Shadowing va diktant: eshitish va talaffuz uchun",
+   "body": "## Shadowing\n\n1. 20–30 soniyalik audio tanlang (Navigate dialogi yoki Pronunciation unit).\n2. Avval **faqat eshiting**, matnni o'qib chiqing.\n3. Quloqchin bilan spiker orqasidan **0,5 soniya** kechikib, ovoz chiqarib takrorlang.\n4. 5–6 marta takrorlang. Maqsad: tezlik, ritm, urg'uni birlashtirish.\n5. Oxirida **o'zingizni yozib** eshiting.\n\nFoydasi: miya tarjima qilishga ulgurmaydi, ingliz ritmiga moslashadi.\n\n## Diktant (transcription)\n\n1. 30–45 soniyalik audio parchani oling.\n2. 3–5 soniyadan to'xtatib, eshitganingizni **so'zma-so'z yozing**.\n3. Skript bilan solishtiring. Xatolarni uch guruhga ajrating: **eshitmadim**, **tanimadim (so'z yo'q)**, **grammatik shakl (-s, -ed, the)**.\n4. Qayta eshiting, xatolarga e'tibor bering.\n\nBu listening uchun eng kuchli mashqlardan biri. Miya yutilgan artikl, predlog va zamon qo'shimchalarini ilg'ashni o'rganadi.\n\n## Sizga tavsiya\n\nHaftada 3 marta 10–15 daqiqa diktant, 4 marta 10 daqiqa shadowing. Hammasidan ko'proq: **qisqa va muntazam**.",
+   "ord": 35,
+   "date": null
+  },
+  {
+   "id": "u02",
+   "cat": "Usullar",
+   "title": "Xatolar daftari (Mistake Journal) tizimi",
+   "body": "Xatosiz til o'rganib bo'lmaydi. Xato, tahlil qilinsa, eng tez o'sish manbai.\n\n## Format\n\n| Mening xatom | To'g'ri | Nega? (qoida) | Tur |\n|---|---|---|---|\n| *He like football.* | *He likes football.* | Present Simple, 3-shaxs -s | grammatika |\n| *I am agree.* | *I agree.* | agree fe'l, oldiga am qo'yilmaydi | grammatika |\n| *I suggest to go.* | *I suggest going.* | suggest + -ing | grammatika |\n\n## Qoidalar\n\n1. Har kuni **2–5 ta yangi yozuv**. Ko'p bo'lsa, eng ko'p takrorlanadiganlarini oling.\n2. **Sababni** yozing. Faqat \"to'g'ri javob\" yozish yetmaydi.\n3. Har yakshanba shu haftaning xatolarini qayta o'qing, **yopib** o'zingiz to'g'rilab ko'ring.\n4. Tur bo'yicha sanang (grammatika, so'z tanlash, imlo, talaffuz). Eng katta guruh = keyingi hafta fokusi.\n\n## Saytda\n\nXatolar bo'limi shu daftarni almashtiradi. Yangi yozuv qo'shing, takrorlanadigan xatolar yig'ilib boradi.",
+   "ord": 36,
+   "date": null
+  },
+  {
+   "id": "u03",
+   "cat": "Usullar",
+   "title": "Intervalli takrorlash (SRS) qanday ishlaydi",
+   "body": "Miya yangi narsani tezda unutadi. Takrorlash o'z vaqtida bo'lsa, xotira mustahkamlanadi va keyingi takrorlash orasi uzayadi.\n\n## Leitner qutilari (saytdagi tizim)\n\n| Quti | Takrorlash |\n|---|---|\n| 1 | Ertasiga |\n| 2 | 2 kundan keyin |\n| 3 | 4 kundan keyin |\n| 4 | 7 kundan keyin |\n| 5 | 14 kundan keyin |\n\nTo'g'ri javob so'zni keyingi qutiga o'tkazadi. **Xato javob uni 1-qutiga qaytaradi.**\n\n## Qanday foydalaniladi\n\n1. Kunning boshida \"bugungi takrorlash\" ni bajaring (10 daqiqa).\n2. Avval **eslashga urining**, keyin javobni oching. Shoshilib ochish samarani yo'qotadi.\n3. Faqat so'z emas, **ibora yoki gap** ham kartaga kiradi.\n4. Haftada 40–60 yangi karta yetarli. Ortiqchasi takrorlash yukini oshiradi.\n\n## Odatdagi xato\n\nBir hafta o'tkazib, 150 ta takrorlash yig'ib qo'yish. Bunday holda takrorlashni 2–3 kunga bo'lib bajaring, yangi so'zni vaqtincha to'xtating.",
+   "ord": 37,
+   "date": null
+  },
+  {
+   "id": "u04",
+   "cat": "Usullar",
+   "title": "Reading va listening: imtihon strategiyalari",
+   "body": "## Reading\n\n1. **Savollarni avval o'qing**, keyin matn. Matnni boshidan oxirigacha so'zma-so'z o'qimang.\n2. **Kalit so'z:** ism, son, sana, noyob ot. Ular o'zgarmaydi, paraphrase bo'ladigan so'zlar esa o'zgaradi.\n3. Savollar tartibi ko'pincha **matn tartibiga mos** (Matching headings dan tashqari).\n4. Bir savolga 1,5 daqiqadan ko'p vaqt sarflamang. Keyinroq qaytasiz.\n5. Hech qachon javobni bo'sh qoldirmang: javoblar uchun minus yo'q.\n\n## Listening\n\n1. Audio boshlanguncha savollarni o'qing, **javob turini** (ism, son, joy) taxmin qiling.\n2. Distraktorlar: \"It starts at 5... no, sorry, at 6.\" Oxirgi variant to'g'ri.\n3. Yozish: **bosh harf, ko'plik -s, imlo** ballga ta'sir qiladi.\n4. Bitta javobni o'tkazib yuborsangiz, o'sha joyda qolmang. Keyingisiga o'ting.\n\n## Qaysi darajada boshlanadi\n\nBular IELTS strategiyasi. Hozir (A2–B1) ularni **tanishish** darajasida o'qing, mashq esa Navigate bilan bo'lsin. Amaliy mashqlar Multilevel va Abror materiallari bilan keyinroq.",
+   "ord": 38,
+   "date": null
+  },
+  {
+   "id": "m01",
+   "cat": "Maslahatlar",
+   "title": "O'zbek tilida so'zlashuvchilar uchun tipik xatolar",
+   "body": "Bu umumiy kuzatuv, o'zbek-ingliz tillari tuzilishi farqiga asoslangan. Sizning haqiqiy xatolaringiz xatolar daftarida.\n\n| Mavzu | Odatiy xato | To'g'ri |\n|---|---|---|\n| Artikllar (o'zbekchada yo'q) | *I have car.* | *I have a car.* |\n| So'z tartibi (SOV → SVO) | *I yesterday film watched.* | *I watched a film yesterday.* |\n| Fe'l -s | *She work here.* | *She works here.* |\n| Predloglar | *I'm interested on music.* | *I'm interested in music.* |\n| \"to be\" + fe'l | *I am agree.* | *I agree.* |\n| Ko'plik | *two book* | *two books* |\n| Ko'rsatkich so'z | *It's very beautiful, nice.* | takrorlarsiz, aniq so'z |\n| Tarjima gapi | *I have 20 years.* | *I'm 20 years old.* |\n\n## Nima qilinadi\n\n1. Xatolar daftarida har bir tur uchun alohida belgi yuriting.\n2. Eng ko'p takrorlanadigan **bitta** xatoni tanlang va 1 hafta shunga e'tibor bering. Hammasini bir vaqtda tuzatib bo'lmaydi.\n3. O'zingizning ovozli yozuvingizda va writingda aynan shu xatoni qidiring.",
+   "ord": 50,
+   "date": null
+  },
+  {
+   "id": "m02",
+   "cat": "Maslahatlar",
+   "title": "Motivatsiya va tanaffus: 8 oylik yo'lda",
+   "body": "8 oy uzun. Boshida hamma kuchli, 6–8 haftadan keyin pasayish deyarli har kimda bo'ladi. Buni oldindan rejalashtiring.\n\n## Pasayish bo'lganda\n\n1. **Minimal kun qoidasi:** juda charchagan kuni faqat 20 daqiqa (SRS + bitta Azar mashq). Zanjir uzilmaydi.\n2. **Katta maqsadni kichik g'alabaga bo'ling.** Bir hafta, bir unit, bitta writing.\n3. **Saytda sana bilan belgilang.** Kalendar va streak ko'rinadigan progress motivatsiya beradi.\n4. **Natijani ko'ring.** Birinchi hafta ovozli yozuvini saqlab qo'ying, 2 oydan keyin tinglang.\n\n## Odatlar\n\n- Bir joy, bir vaqt. Kunning aynan bir paytida o'qisangiz, \"boshlash\" uchun kuch kamroq ketadi.\n- Telefonni boshqa xonaga.\n- Ishdan keyin charchasangiz, eng qiyin ishni (grammatika, writing) kunning eng yaxshi vaqtiga qo'ying.\n\n## Ish va o'qish muvozanati\n\nIsh kuni uzun bo'lsa, 90 daqiqani ikkiga bo'lish mumkin (45 + 45): ertalab lug'at va talaffuz, kechqurun grammatika va writing. Muhimi, ikkala blok ham o'sha kunning o'zida bajarilsin.\n\n> Mukammal reja kerak emas. **Davom etadigan** reja kerak.",
+   "ord": 51,
+   "date": null
+  },
+  {
+   "id": "m03",
+   "cat": "Maslahatlar",
+   "title": "Bepul qo'shimcha resurslar (kitoblardan tashqari)",
+   "body": "Quyidagilar ommaviy tanilgan manbalar. Ular kitoblarni almashtirmaydi, to'ldiradi.\n\n| Resurs | Nima uchun |\n|---|---|\n| Cambridge Dictionary (online) | Inglizcha ta'rif, misol, talaffuz (UK/US) |\n| BBC Learning English: 6 Minute English | Qisqa audio, skript bilan: diktant uchun ideal |\n| British Council LearnEnglish | Daraja bo'yicha Reading/Listening/Grammar |\n| Anki | SRS kartalar (saytdagi Lug'atga muqobil) |\n| YouGlish | So'z real nutqda qanday aytilishini ko'rish |\n| ELLLO | Turli aksentli qisqa suhbatlar |\n\n## Qanday qo'shish kerak\n\n1. Haftada 2 marta **6 Minute English**: bir marta eshiting, keyin diktant, keyin shadowing.\n2. Yangi so'zni avval Cambridge dan tekshiring: ta'rif, misol, urg'u.\n3. Faqat bitta qo'shimcha manba tanlang. Ko'p manba tanlash, ko'p boshlash va kam tugatish.\n\n## Kino va seriallar\n\nHozir (A2/B1-) ingliz subtitrli kontent faqat yengil dam sifatida. O'rganish uchun u hali juda tez va qiyin. B1 dan keyin 10–15 daqiqalik parchani subtitr bilan qayta ko'rish foydali.",
+   "ord": 52,
+   "date": null
+  },
+  {
+   "id": "m04",
+   "cat": "Maslahatlar",
+   "title": "IELTS 7 ball: mezonlar qisqacha",
+   "body": "IELTS 4 ko'nikma bo'yicha baholanadi, umumiy ball ularning o'rtachasi (0,5 ga yaxlitlanadi). **7.0 uchun** har ko'nikmada taxminan 6.5–7.5 kerak, bittasi tushib qolsa, o'rtacha ham tushadi.\n\n## Ko'nikmalar bo'yicha Band 7 ning ma'nosi\n\n| Ko'nikma | Band 7 ko'rinishi |\n|---|---|\n| Listening | 40 savoldan taxminan 30–32 to'g'ri |\n| Reading | 40 savoldan taxminan 30–32 to'g'ri (Academic) |\n| Writing | Savolga to'liq javob, aniq pozitsiya, murakkab gaplar, kam xato, kollokatsiyalar |\n| Speaking | Uzun javoblar, kam to'xtalish, keng lug'at, aniq talaffuz |\n\nReading va Listening uchun to'g'ri javoblar soni testning versiyasiga qarab biroz o'zgaradi, shuning uchun bu raqamlar taxminiy. Rasmiy jadvalni imtihon tayyorgarligi oldidan tekshiring.\n\n## Zaif nuqta qoidasi\n\nKo'pchilik uchun eng qiyin ko'nikma **Writing**. 6.0 dan 7.0 ga o'tish uchun talab: xatolarning keskin kamayishi va aniq mavzuli leksika, buni faqat ko'p yozish va fikr-mulohaza beradi.\n\n## Sizning strategiyangiz\n\n1. Avval **asos**: B1/B2 darajasi.\n2. Har 3 haftada baholash.\n3. 12-oydan boshlab Writing/Speaking bo'yicha Claude bilan **haftalik** ish: 4 mezon bo'yicha ball, 3 ta takrorlanuvchi xato.\n4. Mock testlar: oyiga 1 ta, keyin haftada 1 ta.",
+   "ord": 53,
+   "date": null
+  },
+  {
+   "id": "g01",
+   "cat": "Grammatika",
+   "ord": 60,
+   "date": "2026-11-26",
+   "title": "Present Simple: he / she / it + -s",
+   "body": "Diagnostikada: «Tom play football» deb yozdingiz.\n**Qoida:** he, she, it (yoki bitta odam/narsa) bilan fe'lga **-s / -es** qo'shiladi.\n- I play → He **plays**\n- I watch → She **watches** (-ch, -sh, -s, -x, -o → -es)\n- I study → It **studies** (undosh + y → -ies)\nInkor va savolda -s **does**ga o'tadi, fe'l esa oddiy qoladi:\n- He **doesn't play**. (✗ doesn't plays)\n- **Does** he **play**? (✗ Does he plays?)"
+  },
+  {
+   "id": "g02",
+   "cat": "Grammatika",
+   "ord": 61,
+   "date": "2026-11-26",
+   "title": "Neither of / Each of / Either of + birlik fe'l",
+   "body": "Diagnostikada: «Neither of the students know» → to'g'ri: **knows**.\n`Neither of`, `each of`, `either of`, `none of` + ko'plik ot → fe'l odatda **birlik** bo'ladi (rasmiy uslubda).\n- **Neither** of my brothers **lives** in Tashkent.\n- **Each** of the students **has** a book.\nShunga o'xshash: `The number of` + ko'plik → **has** (birlik). Lekin `A number of students` → **have** (ko'plik)."
+  },
+  {
+   "id": "g03",
+   "cat": "Grammatika",
+   "ord": 62,
+   "date": "2026-11-26",
+   "title": "Wish: hozirgi va o'tmishdagi pushaymonlik",
+   "body": "Diagnostikada: «I wish I have studied harder last year» → to'g'ri: **had studied**.\n- **Hozir** haqida → wish + **Past Simple**: I wish I **knew** more words. (Hozir bilmayman.)\n- **O'tmish** haqida → wish + **Past Perfect**: I wish I **had studied** harder last year. (O'qimaganman.)\n- **Kelajak / boshqa odamning harakati** → wish + **would**: I wish it **would** stop raining.\nBatafsil: Mohida kursi Lesson 20 (Wishes) — 12-hafta rejasida."
+  },
+  {
+   "id": "g04",
+   "cat": "Grammatika",
+   "ord": 63,
+   "date": "2026-11-26",
+   "title": "Gerund (-ing) yoki infinitive (to + fe'l)?",
+   "body": "Diagnostikada: «She suggested to postpone» → to'g'ri: **postponing**.\n**-ing bilan keladi:** suggest, enjoy, avoid, finish, mind, consider, recommend, admit, keep.\n- I enjoy **reading**. She suggested **postponing** the meeting.\n**to + fe'l bilan keladi:** want, decide, plan, hope, agree, refuse, promise, need, learn.\n- I want **to learn** English. He decided **to stay**.\nBatafsil: Mohida kursi Lesson 11–12 — 12-hafta rejasida."
+  },
+  {
+   "id": "g05",
+   "cat": "Grammatika",
+   "ord": 64,
+   "date": "2026-11-26",
+   "title": "Not only … but also (inversion) — Band 7 struktura",
+   "body": "Diagnostikada: «Not only he was late» → to'g'ri: **Not only was he late**.\nAgar `Not only` gap **boshida** kelsa, yordamchi fe'l egadan **oldin** keladi (xuddi savoldagidek):\n- **Not only was he** late, but he also forgot the documents.\n- **Not only does** pollution harm health, but it also damages the economy.\nGap o'rtasida bo'lsa, inversion yo'q: He was **not only** late **but also** rude.\nHozir buni yodda saqlang — faol ishlatish B2 bosqichida."
+  },
+  {
+   "id": "w01",
+   "cat": "Writing",
+   "ord": 70,
+   "date": "2026-11-26",
+   "title": "Fikr yozish uchun gap qoliplari",
+   "body": "Fikrni yetkaza olmaslik — normal holat. Yechim: tayyor qoliplar. Faqat bo'sh joyni to'ldirasiz.\n- **Fikr:** I prefer __ because __. / I think (that) __.\n- **1-sabab:** One reason is that __.\n- **Misol:** For example, __.\n- **2-sabab:** Also, __. / Another reason is that __.\n- **Qarshi fikr:** However, some people think __.\n- **Xulosa:** In conclusion, I believe __.\nBilmagan so'zni o'zbekcha qavs ichida yozing: I like (tinch) places. Men tekshirganda inglizchasini aytaman."
+  },
+  {
+   "id": "w02",
+   "cat": "Writing",
+   "ord": 71,
+   "date": "2026-11-26",
+   "title": "Paragraf tuzilmasi (4-haftadan boshlab)",
+   "body": "Bitta paragraf = bitta asosiy fikr.\n- **Topic sentence:** asosiy fikr (1 gap).\n- **Supporting sentences:** 2 ta sabab, har biriga misol.\n- **Concluding sentence:** fikrni boshqa so'zlar bilan qaytarish.\nBog'lovchilar: **and, but, because, so, also, however, for example, first, then, finally, in conclusion**.\nO'sish rejasi: 1-hafta 3 gap → 2-hafta 5 gap → 4-hafta 80 so'z → 2-oy 100–120 so'z → 3-oy 150 so'z."
+  }
+ ],
+ "tests": [
+  {
+   "id": "t01",
+   "date": "2026-11-26",
+   "name": "Diagnostika: Grammar",
+   "result": "6/10",
+   "detail": "Zamonlar yaxshi. Xatolar: neither of + fe'l, wish, not only inversion, suggest + -ing."
+  },
+  {
+   "id": "t02",
+   "date": "2026-11-26",
+   "name": "Diagnostika: Vocabulary",
+   "result": "0/10",
+   "detail": "Academic so'zlar notanish (urinilmadi)."
+  },
+  {
+   "id": "t03",
+   "date": "2026-11-26",
+   "name": "Diagnostika: Reading",
+   "result": "Akademik: 0 · A2: 4/4 · B1: 4/4",
+   "detail": "Oddiy va B1 matnlarni tushunadi; muammo — so'z boyligi."
+  },
+  {
+   "id": "t04",
+   "date": "2026-11-26",
+   "name": "Diagnostika: Writing",
+   "result": "urinilmadi",
+   "detail": "Fikrni ingliz tilida ifodalash — eng zaif joy."
+  },
+  {
+   "id": "t05",
+   "date": "2026-11-26",
+   "name": "Taxminiy umumiy daraja",
+   "result": "IELTS 3.5–4.0 (A2+/B1-)",
+   "detail": "Listening va Speaking tekshirilmagan."
+  }
+ ],
+ "words": [
+  {
+   "id": "w_diag01",
+   "w": "fluctuate",
+   "uz": "o'zgarib turmoq (ko'tarilib-tushib)",
+   "ex": "Prices fluctuate throughout the year.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag02",
+   "w": "curb",
+   "uz": "cheklamoq, jilovlamoq",
+   "ex": "The government should curb pollution.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag03",
+   "w": "substantial",
+   "uz": "sezilarli, katta",
+   "ex": "There was a substantial increase in prices.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag04",
+   "w": "tend to",
+   "uz": "moyil bo'lmoq, odatda shunday qilmoq",
+   "ex": "Students tend to study the night before an exam.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag05",
+   "w": "detrimental",
+   "uz": "zararli",
+   "ex": "Smoking has a detrimental effect on health.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag06",
+   "w": "come into effect",
+   "uz": "kuchga kirmoq",
+   "ex": "The new law will come into effect next month.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag07",
+   "w": "widespread",
+   "uz": "keng tarqalgan",
+   "ex": "Smartphones are widespread in Uzbekistan.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag08",
+   "w": "alleviate",
+   "uz": "yengillashtirmoq, kamaytirmoq",
+   "ex": "Exercise can alleviate stress.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag09",
+   "w": "trivial",
+   "uz": "ahamiyatsiz, arzimas",
+   "ex": "Don't worry about trivial mistakes.",
+   "added": "2026-11-26"
+  },
+  {
+   "id": "w_diag10",
+   "w": "hold the view (that)",
+   "uz": "… degan fikrda bo'lmoq",
+   "ex": "Many people hold the view that technology isolates us.",
+   "added": "2026-11-26"
+  }
+ ],
+ "mistakes": [
+  {
+   "id": "m_diag01",
+   "wrong": "Tom play football.",
+   "right": "Tom plays football.",
+   "why": "Present Simple: he/she/it + -s",
+   "date": "2026-11-26"
+  },
+  {
+   "id": "m_diag02",
+   "wrong": "Neither of the students know the answer.",
+   "right": "Neither of the students knows the answer.",
+   "why": "Neither of + birlik fe'l",
+   "date": "2026-11-26"
+  },
+  {
+   "id": "m_diag03",
+   "wrong": "I wish I have studied harder last year.",
+   "right": "I wish I had studied harder last year.",
+   "why": "O'tmishdagi pushaymonlik: wish + Past Perfect",
+   "date": "2026-11-26"
+  },
+  {
+   "id": "m_diag04",
+   "wrong": "Not only he was late, but…",
+   "right": "Not only was he late, but…",
+   "why": "Gap boshida Not only → inversion",
+   "date": "2026-11-26"
+  },
+  {
+   "id": "m_diag05",
+   "wrong": "She suggested to postpone the meeting.",
+   "right": "She suggested postponing the meeting.",
+   "why": "suggest + -ing",
+   "date": "2026-11-26"
+  }
+ ],
+ "_notes_v": 2
 }
