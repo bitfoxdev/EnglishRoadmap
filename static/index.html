@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IELTS 7 kundaligi</title>
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,700;7..72,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <style>
@@ -230,6 +231,38 @@ main{padding:18px 14px 40px}.hero{padding:18px 16px 14px}
 details.wk>summary{grid-template-columns:54px minmax(0,1fr)}details.wk>summary .wp{grid-column:1/-1}.drow{grid-template-columns:1fr}.task{grid-template-columns:40px minmax(0,1fr)}.min{grid-column:2}
 table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--rule)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:7em}.stack td::before{content:attr(data-l);float:inline-start;width:6.5em;margin-inline-start:-7em;color:var(--mut);font-size:13px}.stack td:empty{display:none}}
 @media(prefers-reduced-motion:no-preference){.ring circle.p{transition:stroke-dashoffset .5s ease}}
+
+/* foydalanuvchi va chiqish */
+.who{display:grid;grid-template-columns:36px minmax(0,1fr);gap:10px;align-items:center;margin-top:auto;padding:12px 8px 0;border-top:1px solid #ffffff1f}
+.who+.sidestat{margin-top:0;border-top:0;padding-top:12px}
+.av{width:36px;height:36px;border-radius:50%;background:#ffe46b;color:#18213b;display:grid;place-items:center;font:800 16px Literata,Georgia,serif;flex:none}
+.wn2 b{display:block;color:var(--sideink);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.wn2 small{color:var(--sidemut);font-size:12.5px}
+.whobtn{grid-column:1/-1;justify-content:center;display:flex;align-items:center;gap:6px;border:1px solid #ffffff2e;background:transparent;color:var(--sideink);border-radius:9px;padding:6px 10px;min-height:38px;cursor:pointer;font:700 13px 'Atkinson Hyperlegible',system-ui,sans-serif}
+.whobtn:hover{background:#ffffff14}.whobtn svg,.mwho svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mwho{display:none;align-items:center;gap:6px;border:1px solid #ffffff2e;background:transparent;color:#dfe5f5;border-radius:99px;padding:3px 8px 3px 3px;min-height:40px;cursor:pointer}
+.mwho .av{width:30px;height:30px;font-size:14px}
+@media(max-width:900px){.mwho{display:flex}.who{display:none}.mtop .pill{margin-left:auto}}
+/* kirish sahifasi */
+body.auth{display:block}body.auth .side,body.auth .mtop{display:none}body.auth main{max-width:none;padding:0}
+.auth-wrap{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.auth-art{background:var(--side);color:#e6eaf7;padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;justify-content:center;gap:18px;position:relative;overflow:hidden}
+.auth-art::after{content:"";position:absolute;inset:auto -80px -80px auto;width:320px;height:320px;border-radius:50%;border:40px solid #ffffff08}
+.auth-brand{display:flex;align-items:center;gap:12px;font:800 26px/1 Literata,Georgia,serif;position:absolute;top:clamp(24px,4vw,44px);left:clamp(28px,5vw,64px)}
+.auth-brand i{width:9px;height:38px;background:var(--red);border-radius:2px}.auth-brand em{display:block;font:500 15px Literata,Georgia,serif;color:#93a0c4;font-style:normal;margin-top:4px}
+.auth-ring{width:min(220px,40vw);height:auto}
+.auth-art h1{color:#fff;font-size:clamp(30px,4vw,46px);max-width:14ch}
+.auth-art p{color:#b8c2e0;max-width:40ch;margin:0;font-size:17px}
+.auth-art ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.auth-art li{border:1px solid #ffffff26;border-radius:10px;padding:8px 14px;color:#b8c2e0}.auth-art li b{color:#ffe46b;font:800 20px Literata,Georgia,serif;margin-right:4px}
+.auth-card{align-self:center;justify-self:center;width:min(400px,100% - 40px);padding:32px 0}
+.auth-card h2{font-size:34px}.auth-card .dd{margin:6px 0 18px;color:var(--mut)}
+.auth-card label{margin-top:14px}
+.auth-card input{width:100%;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:10px;padding:12px 14px;font-size:16px;min-height:50px}
+.pwrow{position:relative}.pwrow input{padding-right:104px}
+.pwtog{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:var(--soft);color:var(--ink);border-radius:8px;padding:6px 10px;font:700 13px 'Atkinson Hyperlegible',system-ui,sans-serif;cursor:pointer;min-height:34px}
+.lerr{color:var(--red);min-height:1.5em;margin:10px 0 4px;font-weight:700;font-size:15px}
+.auth-btn{width:100%;min-height:50px;font-size:17px}.auth-btn:disabled{opacity:.7;cursor:wait}
+@media(max-width:820px){.auth-wrap{grid-template-columns:1fr;min-height:auto}.auth-art{padding:84px 22px 28px;gap:12px}.auth-ring{display:none}.auth-art h1{font-size:28px}.auth-art p{font-size:15.5px}.auth-card{padding:28px 0 48px}}
 </style>
 </head>
 <body>
@@ -271,7 +304,44 @@ function sideStat(k,n){const el=$('sidestat');if(!el)return;const r=30,c=2*Math.
 function updateHeader(){const el=$('hdrstat');if(!el||!DAYS.length)return;let k=0,n=0;DAYS.forEach(d=>d.tasks.forEach(t=>{n++;if(S.done[t.id])k++}));
  const cd=curDay();el.hidden=false;sideStat(k,n);el.innerHTML=`${dname(cd)}, `+`<b>${(p=>p>0&&p<10?p.toFixed(1):Math.round(p))(100*k/n)}%</b> bajarildi`}
 let S={done:{},dayNotes:{},dates:{}}; let WORDS=[],MIST=[],NOTES=[],TESTS=[],WRIT={};
-const api=async(path,opt={})=>{const r=await fetch('/api/'+path,Object.assign({headers:{'Content-Type':'application/json'}},opt));if(!r.ok)throw new Error(r.status);return r.json()};
+let TOKEN='';try{TOKEN=localStorage.getItem('ielts7_token')||''}catch(e){}
+const api=async(path,opt={})=>{const r=await fetch('/api/'+path,Object.assign({},opt,{headers:{'Content-Type':'application/json','Authorization':'Bearer '+TOKEN}}));if(r.status===401){showLogin();throw new Error('401')}if(!r.ok)throw new Error(r.status);return r.json()};
+function logout(){try{localStorage.removeItem('ielts7_token');localStorage.removeItem('ielts7_user')}catch(e){}TOKEN='';location.hash='';location.reload()}
+function renderWho(){let u='';try{u=localStorage.getItem('ielts7_user')||''}catch(e){}u=u||'Foydalanuvchi';
+ const side=document.querySelector('.side'),stat=document.getElementById('sidestat');
+ if(side&&!document.getElementById('who')){const w=document.createElement('div');w.id='who';w.className='who';
+  w.innerHTML='<span class="av" aria-hidden="true"></span><div class="wn2"><b></b><small>Tizimga kirgan</small></div><button type="button" class="whobtn" title="Chiqish" aria-label="Chiqish"><svg viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"/></svg><span>Chiqish</span></button>';
+  w.querySelector('.av').textContent=u.slice(0,1).toUpperCase();w.querySelector('b').textContent=u;w.querySelector('button').onclick=logout;side.insertBefore(w,stat)}
+ const mt=document.querySelector('.mtop');
+ if(mt&&!document.getElementById('mwho')){const b=document.createElement('button');b.id='mwho';b.type='button';b.className='mwho';b.title='Chiqish ('+u+')';b.setAttribute('aria-label','Chiqish');
+  b.innerHTML='<span class="av"></span><svg viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"/></svg>';b.querySelector('.av').textContent=u.slice(0,1).toUpperCase();b.onclick=logout;mt.appendChild(b)}}
+function showLogin(msg){if(document.getElementById('login'))return;document.body.classList.add('auth');const m=document.querySelector('main');
+ m.innerHTML=`<div class="auth-wrap">
+  <section class="auth-art" aria-hidden="true">
+   <div class="auth-brand"><i></i><span>IELTS 7<em>kundaligi</em></span></div>
+   <svg class="auth-ring" viewBox="0 0 200 200"><circle cx="100" cy="100" r="78" fill="none" stroke="#ffffff1f" stroke-width="18"/><circle cx="100" cy="100" r="78" fill="none" stroke="#ffe46b" stroke-width="18" stroke-linecap="round" stroke-dasharray="490" stroke-dashoffset="150" transform="rotate(-90 100 100)"/><circle cx="100" cy="100" r="50" fill="none" stroke="#ffffff14" stroke-width="10"/><circle cx="100" cy="100" r="50" fill="none" stroke="#ff6b7d" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="120" transform="rotate(-90 100 100)"/></svg>
+   <h1>A2 dan Intermediate gacha</h1>
+   <p>Har kuni 90 daqiqa: Navigate, grammatika, lug'at, talaffuz va writing.</p>
+   <ul><li><b>238</b> dars kuni</li><li><b>34</b> hafta</li><li><b>4</b> bosqich</li></ul>
+  </section>
+  <form id="login" class="auth-card" autocomplete="on">
+   <h2>Kirish</h2>
+   <p class="dd">Davom etish uchun hisobingizga kiring.</p>
+   <label for="un">Login</label>
+   <input type="text" id="un" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+   <label for="pw">Parol</label>
+   <div class="pwrow"><input type="password" id="pw" name="password" autocomplete="current-password" required><button type="button" class="pwtog" id="pwtog" aria-label="Parolni ko'rsatish">Ko'rsatish</button></div>
+   <p class="lerr" id="lerr" role="alert">${msg||''}</p>
+   <button class="btn pri auth-btn" type="submit" id="lbtn">Kirish</button>
+  </form></div>`;
+ const pw=document.getElementById('pw'),tog=document.getElementById('pwtog');
+ tog.onclick=()=>{const show=pw.type==='password';pw.type=show?'text':'password';tog.textContent=show?'Yashirish':'Ko\'rsatish';tog.setAttribute('aria-label',show?'Parolni yashirish':'Parolni ko\'rsatish');pw.focus()};
+ document.getElementById('login').onsubmit=async e=>{e.preventDefault();const b=document.getElementById('lbtn'),er=document.getElementById('lerr');b.disabled=true;b.textContent='Tekshirilmoqda…';er.textContent='';
+  try{const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:document.getElementById('un').value,password:pw.value})});
+   if(!r.ok){er.textContent='Login yoki parol noto\'g\'ri.';b.disabled=false;b.textContent='Kirish';pw.select();return}
+   const j=await r.json();TOKEN=j.token;try{localStorage.setItem('ielts7_token',TOKEN);localStorage.setItem('ielts7_user',document.getElementById('un').value.trim())}catch(x){}location.reload()}
+  catch(x){er.textContent='Server bilan aloqa yo\'q. Keyinroq urinib ko\'ring.';b.disabled=false;b.textContent='Kirish'}};
+ setTimeout(()=>{const u=document.getElementById('un');if(u)u.focus()},50)}
 const post=(path,data)=>api(path,{method:'POST',body:JSON.stringify(data)});
 let selDate='';
 let noteCat='all', noteQ='', flash=null, wordsDraft=null;
@@ -593,8 +663,8 @@ document.addEventListener('keydown',e=>{if(cur()!=='bugun'||!DAYS.length)return;
   DAYS=plan.days;WEEKS=plan.weeks;BYDATE=Object.fromEntries(DAYS.map(d=>[d.date,d]));
   S.done=state.done||{};S.dayNotes=state.dayNotes||{};S.dates=state.dates||{};NOTES=notes;WORDS=words;MIST=mist;TESTS=tests;WRIT=Object.fromEntries(writ.map(x=>[x.id,x]));
   selDate=curDay().date;
-  route();
- }catch(e){console.error(e);document.querySelector('main').innerHTML='<div class="banner"><b>Dastur ishga tushmagan.</b> <code>start.bat</code> faylini oching, so\'ng sahifani yangilang.</div>';setSync('')}
+  renderWho();route();
+ }catch(e){console.error(e);if(String(e.message)==='401')return;document.querySelector('main').innerHTML='<div class="banner"><b>Dastur ishga tushmagan.</b> <code>start.bat</code> faylini oching, so\'ng sahifani yangilang.</div>'}
 })();
 }
 </script>

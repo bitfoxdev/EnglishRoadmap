@@ -263,6 +263,152 @@ body.auth{display:block}body.auth .side,body.auth .mtop{display:none}body.auth m
 .lerr{color:var(--red);min-height:1.5em;margin:10px 0 4px;font-weight:700;font-size:15px}
 .auth-btn{width:100%;min-height:50px;font-size:17px}.auth-btn:disabled{opacity:.7;cursor:wait}
 @media(max-width:820px){.auth-wrap{grid-template-columns:1fr;min-height:auto}.auth-art{padding:84px 22px 28px;gap:12px}.auth-ring{display:none}.auth-art h1{font-size:28px}.auth-art p{font-size:15.5px}.auth-card{padding:28px 0 48px}}
+
+/* ===================== REDESIGN =====================
+   One idea carried from the login page into every screen:
+   the navy "exam desk" panel with answer-sheet dots and the
+   two progress rings (yellow = plan, red = this week).
+   Everything else stays quiet paper. */
+:root{--r-lg:18px;--r-md:14px;--r-sm:10px;--ease:cubic-bezier(.2,.7,.2,1);
+--dots:radial-gradient(circle at 1.5px 1.5px,#ffffff12 1.4px,transparent 1.9px) 0 0/22px 22px;
+--lift:light-dark(0 1px 2px #18213b0f,0 0 0 #0000);--edge:light-dark(#cfd6e6,#343b52)}
+body{background:var(--bg) radial-gradient(circle at 1px 1px,light-dark(#18213b0d,#ffffff08) 1px,transparent 1.5px) 0 0/24px 24px fixed}
+
+/* sidebar */
+.side .brand em,.mtop .brand em{color:var(--sidemut)}
+.side{background:var(--side) var(--dots);border-right:1px solid #ffffff0f}
+.brand i{box-shadow:4px 0 0 -1px #ffe46b55}
+#nav a{position:relative;transition:background-color .16s var(--ease),color .16s var(--ease)}
+#nav a.on{box-shadow:inset 0 -2px 0 #e9b500}
+#nav a.on::before{content:"";position:absolute;left:-14px;top:10px;bottom:10px;width:4px;border-radius:0 3px 3px 0;background:var(--red)}
+.sidestat{grid-template-columns:60px minmax(0,1fr);gap:10px;line-height:1.35}.sidestat svg{width:60px;height:60px}
+.sidestat b{margin-bottom:4px}
+.ss-l{display:flex;align-items:center;gap:6px;font-size:12.5px;white-space:nowrap}
+.ss-l i{width:8px;height:8px;border-radius:50%;flex:none}.k-y{background:#ffe46b}.k-r{background:#ff6b7d}
+.who{border-radius:var(--r-sm)}
+.av{box-shadow:0 0 0 2px var(--side),0 0 0 3.5px #ffe46b66}
+
+/* page header: the login panel, compact */
+.phead{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;
+ background:var(--hero) var(--dots);color:#f2f4fb;border-radius:var(--r-lg);padding:28px 30px 26px 44px;margin:0 0 18px}
+.phead::before{content:"";position:absolute;left:18px;top:30px;bottom:30px;width:6px;border-radius:3px;background:var(--red)}
+.phead::after{content:"";position:absolute;right:-70px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:32px solid #ffffff08;pointer-events:none}
+.phead h1{color:#fff;font-size:clamp(30px,4.4vw,44px);letter-spacing:-.01em}
+.phead p{color:#b8c2e0;margin:10px 0 0;max-width:68ch;font-size:16.5px}
+.ph-a{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px}
+.ph-chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 14px;border:1px solid #ffffff26;border-radius:99px;color:#c9d2ee;font-size:14.5px}
+.ph-chip b{color:#ffe46b;font:800 17px Literata,Georgia,serif}
+.ph-chip.due{border-color:#ff6b7d66}.ph-chip.due b{color:#ff8b99}
+.ph-ring{width:104px;height:104px;position:relative;z-index:1}
+.btn.hl{background:#ffe46b;border-color:#ffe46b;color:#18213b;text-decoration:none;display:inline-flex;align-items:center;font-weight:700}
+.btn.hl:hover{background:#ffd43b;border-color:#ffd43b}
+@media(max-width:600px){.phead{grid-template-columns:1fr;padding:22px 18px 20px 26px}.phead::before{left:12px;top:22px;bottom:22px;width:5px}.ph-ring{display:none}.phead p{font-size:15px}}
+
+/* today hero */
+.hero{background:var(--hero) var(--dots);border-radius:var(--r-lg);padding:26px 28px 20px 42px}
+.hero::before{content:"";position:absolute;left:16px;top:28px;width:6px;height:60px;border-radius:3px;background:var(--red)}
+.hero .ring circle:first-child{stroke:#ffffff1f}
+.timeline{border-radius:9px;gap:2px;background:#ffffff14;padding:2px;height:36px}
+.timeline div{border-radius:7px}
+.ws{border-radius:var(--r-sm);transition:border-color .16s var(--ease),transform .16s var(--ease)}
+a.ws:hover{border-color:var(--blue)}
+.ws.sel{box-shadow:0 0 0 2px var(--hero),0 0 0 4px #ffe46b}
+.navbtn{border-radius:var(--r-sm);transition:border-color .16s var(--ease)}.navbtn:not(:disabled):hover{border-color:var(--blue)}
+
+/* surfaces */
+.sheet,.note,.stat,.goalsbox,details.wk,.stg,.finish,.tasks details.tk,.card,.file{border-radius:var(--r-md);box-shadow:var(--lift)}
+.note,.stat,details.wk,.tasks details.tk,.file{transition:border-color .16s var(--ease)}
+.note:hover,details.wk:hover,.tasks details.tk:hover{border-color:var(--edge)}
+.tasks details.tk{border-left-width:6px}
+.tasks details.tk[open]{border-color:var(--edge);border-left-color:var(--cc)}
+.tasks details.tk.done{background:linear-gradient(90deg,var(--hlsoft),var(--paper) 40%)}
+details.tk>summary{padding:18px 0}
+.tt{width:fit-content;max-width:100%}
+.xd{border-top:1px dashed var(--rule);padding-top:16px}
+.tag{border-radius:99px;padding:2px 10px;letter-spacing:.01em}
+.goalsbox{padding:10px 20px 10px}
+.goals li{border-bottom-style:dotted}
+.stg{border-top:0;position:relative;overflow:hidden;padding-top:16px}
+.stg::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--hero)}
+.stg:nth-child(2)::before{background:var(--blue)}.stg:nth-child(3)::before{background:var(--hlbar)}.stg:nth-child(4)::before{background:var(--red)}
+.finish{border-radius:var(--r-md)}
+details.wk>summary{border-radius:var(--r-md)}
+details.wk[open]>summary{border-bottom:1px solid var(--rule)}
+.wbody{padding-top:4px}
+.today-mark{outline:0;box-shadow:inset 4px 0 0 var(--red),var(--lift)}
+details.wk.today-mark{border-color:color-mix(in srgb,var(--red) 40%,var(--rule))}
+.drow.today-mark{box-shadow:inset 3px 0 0 var(--red);padding-left:12px;border-radius:0}
+
+/* stats: first tile is the highlighter, the rest stay paper */
+.stats{gap:14px}
+.stat{padding:18px 18px 16px;position:relative}
+.stat b{color:var(--ink);letter-spacing:-.01em}
+.stats.top .stat:first-child{background:var(--hl);border-color:var(--hlbar)}
+.stats.top .stat:first-child b,.stats.top .stat:first-child span{color:#18213b}
+.bar{height:9px;background:var(--soft);box-shadow:inset 0 0 0 1px var(--rule)}
+
+/* controls */
+.btn{border-radius:var(--r-sm);transition:background-color .16s var(--ease),border-color .16s var(--ease),transform .08s}
+.btn:active{transform:translateY(1px)}
+.btn.pri:hover{background:light-dark(#2547a0,#a6b9ff);border-color:light-dark(#2547a0,#a6b9ff)}
+textarea,input[type=text],input[type=search],select,.auth-card input,.frow input[type=date]{border-radius:var(--r-sm);transition:border-color .16s var(--ease),box-shadow .16s var(--ease)}
+textarea:focus,input[type=text]:focus,input[type=search]:focus,input[type=password]:focus,select:focus,input[type=date]:focus{border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 22%,transparent);outline:0}
+.chips button{transition:background-color .16s var(--ease),border-color .16s var(--ease)}
+.chips button:not(.on):hover{border-color:var(--edge)}
+.words button{transition:border-color .16s var(--ease),background-color .16s var(--ease)}
+.words button:hover{background:var(--hlsoft);border-color:var(--hlbar)}
+.del{border-radius:var(--r-sm);transition:color .16s,background-color .16s}.del:hover{color:var(--red);background:var(--soft)}
+input[type=search]{padding-left:40px;background:var(--paper) no-repeat 13px 50%/18px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235d6478' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='6.5'/%3E%3Cpath d='M20 20l-4.2-4.2'/%3E%3C/svg%3E")}
+
+/* tables */
+table:not(.secs){background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);border-collapse:separate;border-spacing:0;overflow:hidden;box-shadow:var(--lift)}
+table:not(.secs) th{background:var(--soft);padding:11px 12px}table:not(.secs) td{padding:11px 12px}
+table:not(.secs) tbody tr:last-child td{border-bottom:0}
+table:not(.secs) tbody tr{transition:background-color .12s}table:not(.secs) tbody tr:hover{background:color-mix(in srgb,var(--soft) 60%,transparent)}
+@media(max-width:600px){table.stack{border:0;background:none;box-shadow:none}.stack tr{background:var(--paper);border:1px solid var(--rule)!important;border-radius:var(--r-md);padding:12px 14px!important;margin-bottom:10px}}
+
+/* flashcard: an index card */
+.card{border-radius:var(--r-lg);background:var(--paper);border:1px solid var(--rule);border-top:6px solid var(--red);min-height:240px;transition:border-color .16s var(--ease)}
+.card:hover{border-color:var(--edge);border-top-color:var(--red)}
+.card .fb{color:var(--mut);margin-top:6px}
+
+/* calendar */
+.mon{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-md);padding:16px 14px 14px;box-shadow:var(--lift)}
+.mon h2{font-size:20px}
+.cell{border-radius:9px;border-color:transparent;background:var(--soft)}
+.cell.blank{background:none}
+.cell.full{background:var(--hl);border-color:var(--hlbar)}
+.cell.full b{color:#18213b}
+.cell.fut{opacity:.45}
+.cell.tod{box-shadow:inset 0 0 0 2px var(--red)}
+.cell.tod b{outline:0;padding:0}
+.yearh{display:flex;align-items:center;gap:14px}.yearh::after{content:"";flex:1;height:2px;background:var(--rule);border-radius:2px}
+.yearnav{margin:0 0 6px}
+
+/* notes */
+.note{border-left:5px solid var(--blue);padding:20px 22px}
+.note .meta{display:inline-block;background:var(--soft);border-radius:99px;padding:2px 10px}
+.note h3{margin-top:8px}
+
+/* timer */
+#timer{border-radius:var(--r-md);background:var(--paper);border-top-width:5px}
+
+/* login: same template, richer art */
+.auth-art{background:var(--side) var(--dots)}
+.auth-art::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--red)}
+.auth-visual{position:relative;width:min(400px,100%);height:clamp(200px,26vw,290px);margin-bottom:6px}
+.auth-visual .auth-ring{position:absolute;left:0;top:50%;transform:translateY(-50%);width:clamp(150px,18vw,220px)}
+.auth-sheet{position:absolute;left:clamp(110px,13vw,160px);top:0;height:100%;width:auto;transform:rotate(5deg);transform-origin:30% 80%;filter:drop-shadow(0 18px 30px #0006)}
+@media(prefers-reduced-motion:no-preference){.auth-sheet{animation:sheetIn .7s var(--ease) both .1s}@keyframes sheetIn{from{opacity:0;transform:rotate(12deg) translate(30px,14px)}to{opacity:1;transform:rotate(5deg)}}}
+.auth-art li{background:#ffffff08}
+.auth-card h2{font-size:38px;letter-spacing:-.01em}
+.ifield{position:relative}
+.ifield>svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:20px;height:20px;fill:none;stroke:var(--mut);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;pointer-events:none;transition:stroke .16s}
+.ifield input{padding-left:44px!important}
+.ifield:focus-within>svg{stroke:var(--blue)}
+.auth-btn{border-radius:12px;font-weight:700}
+@media(max-width:820px){.auth-visual{display:none}.auth-art::before{width:5px}}
+@media(max-width:900px){.hero{padding:18px 16px 14px 30px}.hero::before{left:11px;top:20px;height:44px;width:5px}.side{background:var(--side)}#nav a.on::before{display:none}.auth-art{padding-top:104px}}
 </style>
 </head>
 <body>
@@ -299,8 +445,9 @@ function toast(msg,err){const el=$('toast');el.textContent=msg;el.className='sho
 function notify(t){if(/^Saqlandi/.test(t))toast('Saqlandi ✓');else if(/saqlanmadi|Saqlanmadi|xato/i.test(t))toast('Saqlab bo\'lmadi. Internet aloqasini tekshirib, qayta urinib ko\'ring.',true);else if(/Faqat shu brauzerda/.test(t)&&!window.__warned){window.__warned=1;toast('Hozircha belgilar faqat shu qurilmada saqlanadi.',true)}}
 function sideStat(k,n){const el=$('sidestat');if(!el)return;const r=30,c=2*Math.PI*r,p=n?k/n:0;const cd=curDay();const cw=cd.w;const nd=DAYS.filter(doneOn).length;
  let streak=streakDays();
- el.innerHTML=`<svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="${r}" fill="none" stroke="#ffffff24" stroke-width="8"/><circle cx="36" cy="36" r="${r}" fill="none" stroke="#ffe46b" stroke-width="8" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}"/></svg>
- <div><b>${(x=>x>0&&x<10?x.toFixed(1):Math.round(x))(100*p)}% bajarildi</b>Tugatilgan: ${nd} / ${DAYS.length} kun<br>Navbatda: ${dname(cd)}, ${cw}-hafta<br>Ketma-ket: ${streak} kun</div>`}
+ const[wa,wb]=weekStats(cw),wp=wb?wa/wb:0,r2=19,c2=2*Math.PI*r2;
+ el.innerHTML=`<svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="${r}" fill="none" stroke="#ffffff24" stroke-width="7"/><circle cx="36" cy="36" r="${r}" fill="none" stroke="#ffe46b" stroke-width="7" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p)}"/><circle cx="36" cy="36" r="${r2}" fill="none" stroke="#ffffff14" stroke-width="5"/><circle cx="36" cy="36" r="${r2}" fill="none" stroke="#ff6b7d" stroke-width="5" stroke-linecap="round" stroke-dasharray="${c2}" stroke-dashoffset="${c2*(1-wp)}"/></svg>
+ <div><b>${(x=>x>0&&x<10?x.toFixed(1):Math.round(x))(100*p)}% bajarildi</b><span class="ss-l"><i class="k-y"></i>Reja: ${nd} / ${DAYS.length} kun</span><span class="ss-l"><i class="k-r"></i>${cw}-hafta: ${Math.round(100*wp)}%</span><span class="ss-l">Navbatda: ${dname(cd)}</span><span class="ss-l">Ketma-ket: ${streak} kun</span></div>`}
 function updateHeader(){const el=$('hdrstat');if(!el||!DAYS.length)return;let k=0,n=0;DAYS.forEach(d=>d.tasks.forEach(t=>{n++;if(S.done[t.id])k++}));
  const cd=curDay();el.hidden=false;sideStat(k,n);el.innerHTML=`${dname(cd)}, `+`<b>${(p=>p>0&&p<10?p.toFixed(1):Math.round(p))(100*k/n)}%</b> bajarildi`}
 let S={done:{},dayNotes:{},dates:{}}; let WORDS=[],MIST=[],NOTES=[],TESTS=[],WRIT={};
@@ -319,7 +466,10 @@ function showLogin(msg){if(document.getElementById('login'))return;document.body
  m.innerHTML=`<div class="auth-wrap">
   <section class="auth-art" aria-hidden="true">
    <div class="auth-brand"><i></i><span>IELTS 7<em>kundaligi</em></span></div>
+   <div class="auth-visual">
    <svg class="auth-ring" viewBox="0 0 200 200"><circle cx="100" cy="100" r="78" fill="none" stroke="#ffffff1f" stroke-width="18"/><circle cx="100" cy="100" r="78" fill="none" stroke="#ffe46b" stroke-width="18" stroke-linecap="round" stroke-dasharray="490" stroke-dashoffset="150" transform="rotate(-90 100 100)"/><circle cx="100" cy="100" r="50" fill="none" stroke="#ffffff14" stroke-width="10"/><circle cx="100" cy="100" r="50" fill="none" stroke="#ff6b7d" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="120" transform="rotate(-90 100 100)"/></svg>
+   <svg class="auth-sheet" viewBox="0 0 220 280"><rect x="4" y="4" width="212" height="272" rx="12" fill="#f6f8fc"/><rect x="30" y="4" width="2" height="272" fill="#c41e3a"/><text x="44" y="34" font-family="Literata,Georgia,serif" font-weight="800" font-size="15" fill="#18213b">Answer sheet</text><text x="44" y="52" font-family="Atkinson Hyperlegible,sans-serif" font-size="10.5" fill="#5d6478">Reading · Part 1</text>${[0,1,2,3,4,5].map(r=>{const y=84+r*27,pick=[1,3,0,2,1,3][r],done=r<4;return`<text x="44" y="${y+4}" font-family="Literata,Georgia,serif" font-weight="700" font-size="11" fill="#5d6478">${r+1}</text>`+['A','B','C','D'].map((l,c)=>{const x=78+c*32,on=done&&c===pick;return`<circle cx="${x}" cy="${y}" r="9" fill="${on?'#ffe46b':'none'}" stroke="${on?'#e9b500':'#c3cadb'}" stroke-width="1.6"/><text x="${x}" y="${y+3.5}" text-anchor="middle" font-family="Atkinson Hyperlegible,sans-serif" font-weight="700" font-size="9" fill="${on?'#18213b':'#8b93a8'}">${l}</text>`}).join('')}).join('')}<g transform="rotate(-8 160 252)"><rect x="112" y="232" width="96" height="36" rx="16" fill="none" stroke="#c41e3a" stroke-width="2.4"/><text x="160" y="258" text-anchor="middle" font-family="Caveat,cursive" font-weight="600" font-size="24" fill="#c41e3a">Band 7.0</text></g></svg>
+   </div>
    <h1>A2 dan Intermediate gacha</h1>
    <p>Har kuni 90 daqiqa: Navigate, grammatika, lug'at, talaffuz va writing.</p>
    <ul><li><b>238</b> dars kuni</li><li><b>34</b> hafta</li><li><b>4</b> bosqich</li></ul>
@@ -328,9 +478,9 @@ function showLogin(msg){if(document.getElementById('login'))return;document.body
    <h2>Kirish</h2>
    <p class="dd">Davom etish uchun hisobingizga kiring.</p>
    <label for="un">Login</label>
-   <input type="text" id="un" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+   <div class="ifield"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg><input type="text" id="un" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required></div>
    <label for="pw">Parol</label>
-   <div class="pwrow"><input type="password" id="pw" name="password" autocomplete="current-password" required><button type="button" class="pwtog" id="pwtog" aria-label="Parolni ko'rsatish">Ko'rsatish</button></div>
+   <div class="pwrow ifield"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V7.8a3.5 3.5 0 0 1 7 0v2.7"/></svg><input type="password" id="pw" name="password" autocomplete="current-password" required><button type="button" class="pwtog" id="pwtog" aria-label="Parolni ko'rsatish">Ko'rsatish</button></div>
    <p class="lerr" id="lerr" role="alert">${msg||''}</p>
    <button class="btn pri auth-btn" type="submit" id="lbtn">Kirish</button>
   </form></div>`;
@@ -366,6 +516,9 @@ const fmtD=ds=>{if(!ds)return'';const[y,m,dd]=ds.split('-');return`${+dd}-${MNS[
 const shortD=ds=>{if(!ds)return'';const[,m,dd]=ds.split('-');return`${+dd}-${MNS[+m-1].slice(0,3)}`};
 function curDay(){return DAYS.find(d=>!doneOn(d))||DAYS[DAYS.length-1]}
 const dayRole=d=>d.dn==='Yakshanba'?'Takrorlash kuni':`Haftaning ${DAYS.filter(x=>x.w===d.w).indexOf(d)+1}-darsi`;
+function phead(title,desc,aside,pct){const r=34,c=2*Math.PI*r;const art=pct==null?'':`<svg class="ph-ring" viewBox="0 0 92 92" aria-hidden="true"><circle cx="46" cy="46" r="${r}" fill="none" stroke="#ffffff1f" stroke-width="9"/><circle cx="46" cy="46" r="${r}" fill="none" stroke="#ffe46b" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-pct)}" transform="rotate(-90 46 46)"/><text x="46" y="51" text-anchor="middle" font-family="Literata,Georgia,serif" font-weight="800" font-size="17" fill="#fff">${Math.round(100*pct)}%</text></svg>`;
+ return `<header class="phead"><div class="ph-t"><h1>${title}</h1>${desc?`<p>${desc}</p>`:''}${aside?`<div class="ph-a">${aside}</div>`:''}</div>${art}</header>`}
+function planPct(){let k=0,n=0;DAYS.forEach(d=>d.tasks.forEach(t=>{n++;if(S.done[t.id])k++}));return n?k/n:0}
 function doneDates(){return Object.values(S.dates||{}).filter(Boolean)}
 function streakDays(){const set=new Set(doneDates());let s=0;let d=new Date(TODAY+'T00:00:00');if(!set.has(TODAY))d.setDate(d.getDate()-1);while(set.has(iso(d))){s++;d.setDate(d.getDate()-1)}return s}
 function dayStats(d){const n=d.tasks.length;const k=d.tasks.filter(t=>S.done[t.id]).length;return[k,n]}
@@ -490,9 +643,8 @@ function renderCalendar(){
  const endY=Math.max(ey*12+em,ly*12+lm,2027*12+11);
  while(y*12+m<=endY){months.push([y,m]);m++;if(m>11){m=0;y++}}
  const WD=['Du','Se','Ch','Pa','Ju','Sh','Ya'];const cd=curDay();
- let h=`<h1 style="font-size:clamp(30px,5vw,44px)">Kalendar</h1>
- <p class="kick" style="margin-top:10px;max-width:72ch">Bu yerda faqat siz tugatgan kunlar ko'rinadi: har bir dars kuni siz kiritgan sanaga tushadi. Kunni tugatganingizda o'sha kunning sahifasida sanani kiriting.</p>
- <div class="calbar"><span><b>${nd}</b> / ${DAYS.length} kun tugatildi</span><a class="btn pri" href="#kun-${cd.date}" style="text-decoration:none;display:inline-flex;align-items:center;color:#fff">Navbatdagi: ${esc(dname(cd))}</a></div>
+ let h=phead('Kalendar',`Bu yerda faqat siz tugatgan kunlar ko'rinadi: har bir dars kuni siz kiritgan sanaga tushadi. Kunni tugatganingizda o'sha kunning sahifasida sanani kiriting.`,
+  `<span class="ph-chip"><b>${nd}</b> / ${DAYS.length} kun tugatildi</span><a class="btn hl" href="#kun-${cd.date}">Navbatdagi: ${esc(dname(cd))}</a>`,nd/DAYS.length)+`
  <div class="yearnav">${[...new Set(months.map(x=>x[0]))].map(y=>`<button class="btn" type="button" data-y="${y}">${y}</button>`).join('')}</div>`;
  let py=null;
  for(const [y,m] of months){
@@ -512,8 +664,7 @@ let openWeeks=null;
 function renderRoadmap(){
  if(!openWeeks){openWeeks=new Set([curDay().w])}const cdw=curDay().w;
  const sy=window.scrollY;
- let h=`<h1 style="font-size:clamp(30px,5vw,44px)">Roadmap: ${DAYS.length} kun, ${WEEKS.length} hafta</h1>
- <p class="kick" style="margin-top:10px;max-width:70ch">Har kuni 90 daqiqa (dushanba–shanba): lug'at 20, Navigate 40, grammatika yoki talaffuz 20, writing 10. 23-haftadan boshlab lug'at 15, writing 15 daqiqa. Har 7-kun takrorlash va mini test. Sanalar oldindan qo'yilmaydi: kunni tugatganingizda o'zingiz kiritasiz.</p>
+ let h=phead(`Roadmap: ${DAYS.length} kun, ${WEEKS.length} hafta`,`Har kuni 90 daqiqa (dushanba–shanba): lug'at 20, Navigate 40, grammatika yoki talaffuz 20, writing 10. 23-haftadan boshlab lug'at 15, writing 15 daqiqa. Har 7-kun takrorlash va mini test. Sanalar oldindan qo'yilmaydi: kunni tugatganingizda o'zingiz kiritasiz.`,'',planPct())+`
  <div class="stages">${[['A1','Tekshiruv',1,1],['A2','Elementary',2,10],['B1','Pre-Intermediate',11,22],['B1+','Intermediate',23,34]].filter(s=>WEEKS[s[3]-1]).map(([lv,nm,a,b])=>{let k=0,n=0;for(let w=a;w<=b;w++){const[x,y]=weekStats(w);k+=x;n+=y}return`<div class="stg"><b>${lv}</b><span>${nm}</span><small>${a===b?a+'-hafta':a+'–'+b+'-haftalar'}, ${DAYS.filter(d=>d.w>=a&&d.w<=b).length} kun</small><div class="bar"><i style="width:${Math.round(100*k/n)}%"></i></div></div>`}).join('')}</div>`;
  for(const m of [...new Set(WEEKS.map(w=>w.m))]){
   const ws=WEEKS.filter(w=>w.m===m);
@@ -543,8 +694,7 @@ function renderNotes(){
  const cats=[...new Set(NOTES.map(n=>n.cat).filter(Boolean))];
  const list=NOTES.filter(n=>(noteCat==='all'||n.cat===noteCat)&&(!noteQ||(n.title+' '+n.body).toLowerCase().includes(noteQ.toLowerCase())))
   .sort((a,b)=>(a.ord??999)-(b.ord??999)||String(a.date).localeCompare(String(b.date)));
- $('v-notes').innerHTML=`<h1 style="font-size:clamp(30px,5vw,44px)">Notes</h1>
- <p class="kick" style="margin-top:10px">Mavzular bo'yicha konspektlar. Har darsdan keyin yangi mavzu qo'shing (Claude yozib bergan konspektni shu yerga joylang).</p>
+ $('v-notes').innerHTML=phead('Notes',`Mavzular bo'yicha konspektlar. Har darsdan keyin yangi mavzu qo'shing (Claude yozib bergan konspektni shu yerga joylang).`,`<span class="ph-chip"><b>${NOTES.length}</b> ta note</span>`)+`
  <details class="wk" style="margin-top:12px"><summary style="display:block;font-weight:700">+ Yangi note qo'shish</summary><form id="nf" class="wbody">
   <div class="grid2"><div><label for="nt">Sarlavha</label><input type="text" id="nt" required placeholder="Present Perfect vs Past Simple"></div>
   <div><label for="nc">Bo'lim</label><input type="text" id="nc" list="ncl" required placeholder="Grammatika"><datalist id="ncl">${cats.map(c=>`<option value="${esc(c)}">`).join('')}</datalist></div></div>
@@ -571,8 +721,8 @@ function gradeWord(id,ok){const x=WORDS.find(w=>w.id===id);if(!x)return;const wa
 function renderWords(){
  const w=curWeek();const wkWords=DAYS.filter(d=>d.w===w).flatMap(d=>d.tasks.filter(t=>t.w).flatMap(t=>t.w));
  const have=new Set(WORDS.map(x=>x.w.toLowerCase()));
- $('v-lugat').innerHTML=`<h1 style="font-size:clamp(30px,5vw,44px)">Lug'at</h1>
- <p class="kick" style="margin-top:10px">Faqat ma'nosini bilgan va o'zingiz gap tuzgan so'zlarni qo'shing. Flashcard bilan har kuni takrorlang.</p>
+ const nDue=dueWords().length;
+ $('v-lugat').innerHTML=phead(`Lug'at`,`Faqat ma'nosini bilgan va o'zingiz gap tuzgan so'zlarni qo'shing. Flashcard bilan har kuni takrorlang.`,`<span class="ph-chip"><b>${WORDS.length}</b> ta so'z</span>${nDue?`<span class="ph-chip due"><b>${nDue}</b> tasi bugun takrorlanadi</span>`:''}`)+`
  <div class="grid2" style="margin-top:14px">
   <form class="sheet" id="wf"><h2 style="font-size:22px">Yangi so'z</h2>
    <label for="ww">So'z yoki ibora</label><input type="text" id="ww" required value="${esc(wordsDraft||'')}">
@@ -608,8 +758,7 @@ function renderFlash(){
 
 /* ---------- Xatolar ---------- */
 function renderMist(){
- $('v-xatolar').innerHTML=`<h1 style="font-size:clamp(30px,5vw,44px)">Xatolar daftari</h1>
- <p class="kick" style="margin-top:10px">Har bir xato uchun: noto'g'ri variant, to'g'risi va qoidasi. Yakshanba kuni hammasini qayta o'qing.</p>
+ $('v-xatolar').innerHTML=phead('Xatolar daftari',`Har bir xato uchun: noto'g'ri variant, to'g'risi va qoidasi. Yakshanba kuni hammasini qayta o'qing.`,`<span class="ph-chip"><b>${MIST.length}</b> ta xato yozilgan</span>`)+`
  <form class="sheet" id="mf" style="margin-top:14px"><div class="grid2">
   <div><label for="mw">Mening xatoim</label><input type="text" id="mw" required placeholder="He play football."></div>
   <div><label for="mr">To'g'ri varianti</label><input type="text" id="mr" required placeholder="He plays football."></div></div>
@@ -630,8 +779,8 @@ function renderProgress(){
   const proj=n=>{const x=new Date(now);x.setDate(x.getDate()+Math.ceil(left/n*7));return fmtD(iso(x))};
   pace=`<div class="sec"><h2>Tezlik va prognoz</h2><div class="stats"><div class="stat"><b>${perW.toFixed(1)}</b><span>kun haftasiga (sizning tezligingiz)</span></div><div class="stat"><b>${left?proj(Math.max(perW,0.5)):'—'}</b><span>shu tezlikda reja tugashi</span></div><div class="stat"><b>${left?proj(7):'—'}</b><span>rejadagidek (haftasiga 7 kun) davom etsangiz</span></div></div></div>`}
  const mins=DAYS.reduce((s,d)=>s+d.tasks.filter(t=>S.done[t.id]).reduce((x,t)=>x+t.m,0),0);
- $('v-progress').innerHTML=`<h1 style="font-size:clamp(30px,5vw,44px)">Progress</h1>
- <div class="stats">
+ $('v-progress').innerHTML=phead('Progress',`A2 dan Intermediate gacha bosib o'tgan yo'lingiz: vazifalar, kunlar, lug'at va xatolar.`,'',n?k/n:0)+`
+ <div class="stats top">
   <div class="stat"><b>${Math.round(100*k/n)}%</b><span>rejaning bajarilgan qismi</span></div>
   <div class="stat"><b>${ndone}/${DAYS.length}</b><span>tugatilgan kunlar</span></div>
   <div class="stat"><b>${streak}</b><span>kun ketma-ket (streak)</span></div>

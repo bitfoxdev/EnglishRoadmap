@@ -59,6 +59,27 @@ COLLECTIONS = {
 _lock = threading.Lock()
 
 
+# ---------- kirish: bitta parol (data/password.txt yoki APP_PASSWORD) ----------
+import hashlib, hmac
+
+
+def get_password():
+    pw = os.environ.get("APP_PASSWORD", "").strip()
+    if pw:
+        return pw
+    path = os.path.join(DATA, "password.txt")
+    if not os.path.exists(path):
+        os.makedirs(DATA, exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("ielts7")
+    with open(path, encoding="utf-8") as f:
+        return f.read().strip() or "ielts7"
+
+
+def token_for(pw):
+    return hmac.new(pw.encode(), b"ielts7-kundaligi-v1", hashlib.sha256).hexdigest()
+
+
 def connect():
     con = sqlite3.connect(DB_PATH)
     con.row_factory = sqlite3.Row
@@ -164,6 +185,10 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
+    def authed(self):
+        got = (self.headers.get("Authorization") or "").replace("Bearer ", "", 1).strip()
+        return hmac.compare_digest(got, token_for(get_password()))
+
     # ---------- routes ----------
     def do_GET(self):
         p = urlparse(self.path).path
@@ -184,6 +209,8 @@ class Handler(BaseHTTPRequestHandler):
                              "goals": json.loads(d["goals"]) if d["goals"] else [], "tasks": tasks.get(d["date"], [])})
             con.close()
             return self.send_json({"days": days, "weeks": weeks})
+        if p.startswith("/api/") and not self.authed():
+            return self.send_json({"error": "unauthorized"}, 401)
         if p == "/api/version":
             return self.send_json({"version": 4})
         if p == "/api/state":
@@ -217,6 +244,12 @@ class Handler(BaseHTTPRequestHandler):
             body = self.read_json()
         except Exception:
             return self.send_json({"error": "bad json"}, 400)
+        if p == "/api/login":
+            if not hmac.compare_digest(str(body.get("password", "")), get_password()):
+                return self.send_json({"error": "wrong password"}, 401)
+            return self.send_json({"token": token_for(get_password())})
+        if p.startswith("/api/") and not self.authed():
+            return self.send_json({"error": "unauthorized"}, 401)
         if p == "/api/open":
             # Kitobni kompyuterdagi dastur bilan ochish (faqat kitoblar papkasi ichida)
             full = os.path.realpath(os.path.join(BOOKS_ROOT, str(body.get("path", "")).replace("\\", os.sep)))
@@ -267,6 +300,8 @@ class Handler(BaseHTTPRequestHandler):
         return self.send_json({"ok": True})
 
     def do_DELETE(self):
+        if not self.authed():
+            return self.send_json({"error": "unauthorized"}, 401)
         parts = urlparse(self.path).path.strip("/").split("/")
         if len(parts) == 3 and parts[0] == "api" and parts[1] in COLLECTIONS:
             table, _ = COLLECTIONS[parts[1]]
@@ -308,6 +343,7 @@ def main():
     port = srv.server_address[1]
     url = f"http://{HOST}:{port}"
     print(f"English roadmap ishlayapti: {url}")
+    print("Kirish paroli: data/password.txt faylida (birinchi marta: ielts7). Login maydoni ixtiyoriy.")
     print("To'xtatish uchun: Ctrl+C")
     if "--no-browser" not in sys.argv:
         threading.Timer(0.8, lambda: webbrowser.open(url)).start()
