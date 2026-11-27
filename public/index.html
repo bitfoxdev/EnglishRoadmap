@@ -227,11 +227,21 @@ b.due{color:var(--red)}
 .mtop .pill{margin:0;border-color:#ffffff33;color:#c9d2ee}.mtop .pill b{color:#fff}
 main{padding:18px 14px 40px}.hero{padding:18px 16px 14px}
 #timer{bottom:76px!important}#toast{bottom:84px}}
-@media(max-width:600px){.wsrow{grid-template-columns:30px minmax(0,1fr) 30px;gap:4px}.weekstrip{gap:3px}.ws{padding:6px 0 8px}.ws b{font-size:16px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.kbdhint,.tl-n{display:none}.daynav .btn{flex:1 1 auto}.kv{grid-template-columns:1fr}.xd{padding-left:0}details.tk>summary{grid-template-columns:40px minmax(0,1fr)}.sheet{padding:18px 14px 18px 40px}.dayhead{grid-template-columns:1fr auto}.ring{width:86px;height:86px}.ring b{font-size:20px}
+@media(max-width:600px){.wsrow{grid-template-columns:30px minmax(0,1fr) 30px;gap:4px}.weekstrip{gap:3px}.ws{padding:6px 0 8px}.ws b{font-size:16px}.ws span{font-size:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.kbdhint,.tl-n{display:none}.daynav .btn{flex:1 1 auto}.kv{grid-template-columns:1fr}.xd{padding-left:0}details.tk>summary{grid-template-columns:40px minmax(0,1fr)}.sheet{padding:18px 14px 18px 40px}.dayhead{grid-template-columns:1fr auto}.ring{width:86px;height:86px}.ring b{font-size:20px}
 details.wk>summary{grid-template-columns:54px minmax(0,1fr)}details.wk>summary .wp{grid-column:1/-1}.drow{grid-template-columns:1fr}.task{grid-template-columns:40px minmax(0,1fr)}.min{grid-column:2}
 table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--rule)}.stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:7em}.stack td::before{content:attr(data-l);float:inline-start;width:6.5em;margin-inline-start:-7em;color:var(--mut);font-size:13px}.stack td:empty{display:none}}
 @media(prefers-reduced-motion:no-preference){.ring circle.p{transition:stroke-dashoffset .5s ease}}
 
+/* foydalanuvchi va chiqish */
+.who{display:grid;grid-template-columns:36px minmax(0,1fr);gap:10px;align-items:center;margin-top:auto;padding:12px 8px 0;border-top:1px solid #ffffff1f}
+.who+.sidestat{margin-top:0;border-top:0;padding-top:12px}
+.av{width:36px;height:36px;border-radius:50%;background:#ffe46b;color:#18213b;display:grid;place-items:center;font:800 16px Literata,Georgia,serif;flex:none}
+.wn2 b{display:block;color:var(--sideink);font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.wn2 small{color:var(--sidemut);font-size:12.5px}
+.whobtn{grid-column:1/-1;justify-content:center;display:flex;align-items:center;gap:6px;border:1px solid #ffffff2e;background:transparent;color:var(--sideink);border-radius:9px;padding:6px 10px;min-height:38px;cursor:pointer;font:700 13px 'Atkinson Hyperlegible',system-ui,sans-serif}
+.whobtn:hover{background:#ffffff14}.whobtn svg,.mwho svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mwho{display:none;align-items:center;gap:6px;border:1px solid #ffffff2e;background:transparent;color:#dfe5f5;border-radius:99px;padding:3px 8px 3px 3px;min-height:40px;cursor:pointer}
+.mwho .av{width:30px;height:30px;font-size:14px}
+@media(max-width:900px){.mwho{display:flex}.who{display:none}.mtop .pill{margin-left:auto}}
 /* kirish sahifasi */
 body.auth{display:block}body.auth .side,body.auth .mtop{display:none}body.auth main{max-width:none;padding:0}
 .auth-wrap{min-height:100vh;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
@@ -296,6 +306,15 @@ function updateHeader(){const el=$('hdrstat');if(!el||!DAYS.length)return;let k=
 let S={done:{},dayNotes:{},dates:{}}; let WORDS=[],MIST=[],NOTES=[],TESTS=[],WRIT={};
 let TOKEN='';try{TOKEN=localStorage.getItem('ielts7_token')||''}catch(e){}
 const api=async(path,opt={})=>{const r=await fetch('/api/'+path,Object.assign({},opt,{headers:{'Content-Type':'application/json','Authorization':'Bearer '+TOKEN}}));if(r.status===401){showLogin();throw new Error('401')}if(!r.ok)throw new Error(r.status);return r.json()};
+function logout(){try{localStorage.removeItem('ielts7_token');localStorage.removeItem('ielts7_user')}catch(e){}TOKEN='';location.hash='';location.reload()}
+function renderWho(){let u='';try{u=localStorage.getItem('ielts7_user')||''}catch(e){}u=u||'Foydalanuvchi';
+ const side=document.querySelector('.side'),stat=document.getElementById('sidestat');
+ if(side&&!document.getElementById('who')){const w=document.createElement('div');w.id='who';w.className='who';
+  w.innerHTML='<span class="av" aria-hidden="true"></span><div class="wn2"><b></b><small>Tizimga kirgan</small></div><button type="button" class="whobtn" title="Chiqish" aria-label="Chiqish"><svg viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"/></svg><span>Chiqish</span></button>';
+  w.querySelector('.av').textContent=u.slice(0,1).toUpperCase();w.querySelector('b').textContent=u;w.querySelector('button').onclick=logout;side.insertBefore(w,stat)}
+ const mt=document.querySelector('.mtop');
+ if(mt&&!document.getElementById('mwho')){const b=document.createElement('button');b.id='mwho';b.type='button';b.className='mwho';b.title='Chiqish ('+u+')';b.setAttribute('aria-label','Chiqish');
+  b.innerHTML='<span class="av"></span><svg viewBox="0 0 24 24"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"/></svg>';b.querySelector('.av').textContent=u.slice(0,1).toUpperCase();b.onclick=logout;mt.appendChild(b)}}
 function showLogin(msg){if(document.getElementById('login'))return;document.body.classList.add('auth');const m=document.querySelector('main');
  m.innerHTML=`<div class="auth-wrap">
   <section class="auth-art" aria-hidden="true">
@@ -320,7 +339,7 @@ function showLogin(msg){if(document.getElementById('login'))return;document.body
  document.getElementById('login').onsubmit=async e=>{e.preventDefault();const b=document.getElementById('lbtn'),er=document.getElementById('lerr');b.disabled=true;b.textContent='Tekshirilmoqda…';er.textContent='';
   try{const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:document.getElementById('un').value,password:pw.value})});
    if(!r.ok){er.textContent='Login yoki parol noto\'g\'ri.';b.disabled=false;b.textContent='Kirish';pw.select();return}
-   const j=await r.json();TOKEN=j.token;try{localStorage.setItem('ielts7_token',TOKEN)}catch(x){}location.reload()}
+   const j=await r.json();TOKEN=j.token;try{localStorage.setItem('ielts7_token',TOKEN);localStorage.setItem('ielts7_user',document.getElementById('un').value.trim())}catch(x){}location.reload()}
   catch(x){er.textContent='Server bilan aloqa yo\'q. Keyinroq urinib ko\'ring.';b.disabled=false;b.textContent='Kirish'}};
  setTimeout(()=>{const u=document.getElementById('un');if(u)u.focus()},50)}
 const post=(path,data)=>api(path,{method:'POST',body:JSON.stringify(data)});
@@ -643,7 +662,7 @@ document.addEventListener('keydown',e=>{if(cur()!=='bugun'||!DAYS.length)return;
   DAYS=plan.days;WEEKS=plan.weeks;BYDATE=Object.fromEntries(DAYS.map(d=>[d.date,d]));
   S.done=state.done||{};S.dayNotes=state.dayNotes||{};S.dates=state.dates||{};NOTES=notes;WORDS=words;MIST=mist;TESTS=tests;WRIT=Object.fromEntries(writ.map(x=>[x.id,x]));
   selDate=curDay().date;
-  route();
+  renderWho();route();
  }catch(e){console.error(e);if(String(e.message)==='401')return;document.querySelector('main').innerHTML='<div class="banner"><b>Ma\'lumotlar yuklanmadi.</b> Internet aloqasini tekshirib, sahifani yangilang. Muammo davom etsa, Vercel loyihasidagi TURSO_* sozlamalarini tekshiring.</div>'}
 })();
 }
