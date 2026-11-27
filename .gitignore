@@ -1,0 +1,10 @@
+# Lokal baza va vaqtinchalik fayllar
+data/english.db
+data/english.db-*
+.data/
+__pycache__/
+# Maxfiy sozlamalar
+.env
+.env.local
+.vercel/
+node_modules/

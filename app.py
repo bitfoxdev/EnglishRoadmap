@@ -86,7 +86,11 @@ def init_db():
     if "goals" not in cols:
         con.execute("ALTER TABLE days ADD COLUMN goals TEXT")
     # Reja: faqat birinchi marta (yoki plan.json yangilanganda) yuklanadi; bajarilganlar saqlanib qoladi
-    plan = json.load(open(os.path.join(DATA, "plan.json"), encoding="utf-8"))
+    # Reja bitta joyda: public/plan.json (Vercel versiyasi ham shuni ishlatadi)
+    plan_path = os.path.join(BASE, "public", "plan.json")
+    if not os.path.exists(plan_path):
+        plan_path = os.path.join(DATA, "plan.json")
+    plan = json.load(open(plan_path, encoding="utf-8"))
     for w in plan["weeks"]:
         con.execute("INSERT OR REPLACE INTO weeks VALUES(?,?,?,?,?,?,?,?,?)",
                     (w["w"], w["m"], w["start"], w["end"], w["nav"], w["gram"], w["pron"], w["vocab"], w["write"]))

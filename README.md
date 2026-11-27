@@ -1,51 +1,67 @@
-# English 3 oylik reja (lokal, SQLite)
+# EnglishRoadmap — IELTS 7 kundaligi
 
-30-noyabr 2026 – 28-fevral 2027: kalendar, har kun uchun batafsil sahifa (maqsadlar, vaqt jadvali, qadamma-qadam yo'riqnoma, bo'limlar, sahifalar, fayllar), notes, lug'at, xatolar daftari va progress.
+8 oylik o'qish rejasi (238 kun, A2 → Intermediate B1+): kalendar, batafsil kun sahifalari, notes,
+lug'at (interval takrorlash), xatolar daftari, writing maydoni, taymer va progress.
 
-«Ochish» tugmasi kitob PDF'ini kompyuteringizdagi dastur bilan ochadi (faqat `D:\English language` ichidagi fayllar).
-Hammasi kompyuteringizda, `data/english.db` (SQLite) faylida saqlanadi. Internet kerak emas (faqat shriftlar uchun).
+Loyiha ikki xil ishlaydi:
 
-## Ishga tushirish
-1. Python 3.8+ o'rnatilgan bo'lsin (qo'shimcha kutubxona kerak emas).
-2. `start.bat` ni ikki marta bosing (yoki terminalda `python app.py`).
-3. Brauzer o'zi ochiladi: http://127.0.0.1:8765
-4. To'xtatish: terminal oynasida `Ctrl+C`.
-
-Boshqa port: `set PORT=9000 && python app.py`
+| Rejim | Qayerda | Baza | Ishga tushirish |
+|---|---|---|---|
+| **Vercel** (asosiy) | internetda, telefon va kompyuterda | Turso (bulutdagi SQLite) | GitHub'ga push → Vercel o'zi deploy qiladi |
+| **Lokal** | faqat shu kompyuterda | `data/english.db` (SQLite) | `start.bat` |
 
 ## Tuzilma
 ```
-english-roadmap/
-├─ app.py            # server + REST API (http.server + sqlite3)
-├─ start.bat         # Windows uchun ishga tushirish
-├─ static/index.html # interfeys
-└─ data/
-   ├─ plan.json      # 91 kunlik reja (birinchi ishga tushishda bazaga yuklanadi)
-   ├─ seed.json      # boshlang'ich notes, so'zlar, xatolar, testlar
-   └─ english.db     # SQLite baza (avtomatik yaratiladi)
+api/index.js        # Vercel funksiyasi: barcha /api/* so'rovlari
+lib/app.js          # API mantiqi, sxema, parol tekshiruvi
+lib/db.js           # Turso HTTP adapteri (lokalda node:sqlite)
+lib/seed.js         # boshlang'ich notes, so'zlar, xatolar, testlar
+public/index.html   # sayt (Vercel)
+public/plan.json    # 238 kunlik reja (ikkala rejim ham shuni o'qiydi)
+vercel.json         # /api/* -> api/index.js
+.vercelignore       # lokal fayllar deployga kirmaydi
+
+app.py, start.bat   # lokal server (Python, kutubxonasiz)
+static/index.html   # lokal versiya sahifasi
+data/seed.json      # lokal boshlang'ich ma'lumotlar
+scripts/            # dev.js (lokal Node server), smoke.js (API testi)
 ```
 
-## Jadvallar
-| Jadval | Nima saqlanadi |
+## Vercel + Turso
+1. **Turso** (app.turso.tech): baza yarating, uning `libsql://...` manzilini va tokenini oling.
+2. **Vercel** → Project → Settings → Environment Variables:
+
+| Key | Qiymat |
 |---|---|
-| `weeks`, `days`, `tasks` | reja; `tasks.done`, `tasks.done_at` — bajarilganlar |
-| `day_notes` | har kungi izoh |
-| `day_dates` | kun tugatilgan sana (o'zingiz kiritasiz) |
-| `notes` | mavzu bo'yicha konspektlar |
-| `words` | lug'at (so'z, o'zbekcha ma'no, misol) |
-| `mistakes` | xatolar daftari |
-| `tests` | test va baholash natijalari |
+| `TURSO_DATABASE_URL` | `libsql://<baza>-<org>.turso.io` |
+| `TURSO_AUTH_TOKEN` | bazaning tokeni (read-only emas) |
+| `APP_PASSWORD` | saytga kirish paroli |
 
-## API
-- `GET /api/plan`, `GET /api/state`
-- `POST /api/done` `{id, done}` · `POST /api/daynote` `{date, body}` · `POST /api/daydate` `{key, on}`
-- `GET|POST /api/notes|words|mistakes|tests`, `DELETE /api/<nom>/<id>`
-- `POST /api/open` `{path}` — kitobni ochish (yo'l `D:\English language` ga nisbatan)
-- `GET /api/export` — hamma ma'lumot JSON ko'rinishida (zaxira uchun)
+3. Framework Preset: **Other**, Root Directory: `./`. O'zgaruvchilarni qo'shgandan keyin **Redeploy**.
 
-## Zaxira
-`data/english.db` faylini nusxalab qo'ying yoki brauzerda `http://127.0.0.1:8765/api/export` ni oching va saqlang.
+Jadvallar va boshlang'ich ma'lumotlar birinchi so'rovda avtomatik yaratiladi.
 
-## Yangilash
-`plan.json` o'zgarsa, server qayta ishga tushganda reja yangilanadi; bajarilgan belgilar saqlanib qoladi.
-`seed.json`dagi yozuvlar faqat bir marta qo'shiladi: siz o'chirgan yozuv qaytib kelmaydi.
+## Lokal
+```bash
+start.bat                      # Python 3.8+, http://127.0.0.1:8765
+node scripts/dev.js            # Vercel versiyasini lokal sinash (Node 22), parol: dev
+node scripts/smoke.js          # API testi
+```
+
+## API (Vercel)
+| Metod | Yo'l | Tavsif |
+|---|---|---|
+| POST | /api/login `{password}` | token qaytaradi |
+| GET | /api/state | bajarilgan vazifalar, kun izohlari, tugatilgan sanalar |
+| POST | /api/done `{id, done}` | vazifa belgisi |
+| POST | /api/daynote `{date, body}` | kun izohi |
+| POST | /api/daydate `{key, on}` | kun tugatilgan sana (bo'sh = olib tashlash) |
+| GET/POST | /api/notes · words · mistakes · tests · writings | ro'yxat / qo'shish yoki yangilash |
+| DELETE | /api/<nom>/<id> | o'chirish |
+| GET | /api/export | hamma ma'lumot JSON (zaxira) |
+
+Login'dan boshqa barcha so'rovlar `Authorization: Bearer <token>` talab qiladi.
+
+## Xavfsizlik
+- Sayt parol bilan himoyalangan; token paroldan HMAC orqali olinadi. Parolni almashtirsangiz, eski tokenlar ishlamay qoladi.
+- `.env` va `data/english.db` GitHub'ga yuklanmaydi (`.gitignore`).

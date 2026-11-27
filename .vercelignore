@@ -1,0 +1,7 @@
+# Vercel faqat api/, lib/, public/ ni oladi; lokal Python versiyasi deployga kirmaydi
+app.py
+start.bat
+static/
+data/
+scripts/
+.data/
